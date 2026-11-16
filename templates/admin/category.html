@@ -1,0 +1,89 @@
+
+{% extends "admin/base.html" %}
+
+{% block title %}Categories | ShopZone Admin{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+    <div>
+        <h1>Categories</h1>
+        <p>Manage product categories in your store.</p>
+    </div>
+</div>
+
+<!-- Category Information -->
+
+<div class="category-form-container">
+
+    <h2>Add New Category</h2>
+
+    <p>
+        To create a new category, go to Add Product
+        and enter the category name.
+        It will appear here after saving the product.
+    </p>
+
+    <a href="{{ url_for('admin_add_products') }}"
+       class="btn btn-primary">
+        Add Product
+    </a>
+
+</div>
+
+<!-- Category List -->
+
+<div class="category-section">
+
+    <div class="section-header">
+
+        <h2>Category List</h2>
+
+        <span>
+            Total Categories: {{ categories|length }}
+        </span>
+
+    </div>
+
+    <div class="table-container">
+
+        <table class="category-table">
+
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Category Name</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {% for category in categories %}
+
+                <tr>
+                    <td>{{ loop.index }}</td>
+
+                    <td>
+                        <strong>{{ category[0] }}</strong>
+                    </td>
+                </tr>
+
+                {% else %}
+
+                <tr>
+                    <td colspan="2" class="no-categories">
+                        No categories found.
+                    </td>
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}

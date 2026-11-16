@@ -1,0 +1,172 @@
+
+{% extends "admin/base.html" %}
+
+{% block title %}Users | ShopZone Admin{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+    <div>
+        <h1>Users</h1>
+        <p>Manage registered users in your store.</p>
+    </div>
+</div>
+
+<!-- FLASH MESSAGES -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert {{ category }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<!-- USER SEARCH -->
+<div class="user-tools">
+
+    <form method="GET" action="{{ url_for('admin_users') }}">
+
+        <input
+            type="text"
+            name="search"
+            placeholder="Search by name or email..."
+            value="{{ request.args.get('search', '') }}"
+        >
+
+        <select name="role">
+
+            <option value="">All Roles</option>
+
+            <option value="user"
+                {% if request.args.get('role') == 'user' %}selected{% endif %}>
+                User
+            </option>
+
+            <option value="admin"
+                {% if request.args.get('role') == 'admin' %}selected{% endif %}>
+                Admin
+            </option>
+
+        </select>
+
+        <button type="submit" class="btn btn-search">
+            Search
+        </button>
+
+        <a href="{{ url_for('admin_users') }}" class="btn">
+            Clear
+        </a>
+
+    </form>
+
+</div>
+
+<!-- USERS LIST -->
+<div class="user-section">
+
+    <div class="section-header">
+        <h2>User List</h2>
+        <span>Total Users: {{ users|length }}</span>
+    </div>
+
+    <div class="table-container">
+
+        <table class="user-table">
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Role</th>
+                    <th>Registered Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {% for user in users %}
+
+                <tr>
+
+                    <!-- USER ID -->
+                    <td>
+                        {{ user.user_id }}
+                    </td>
+
+                    <!-- USER NAME -->
+                    <td>
+                        <strong>{{ user.username }}</strong>
+                    </td>
+
+                    <!-- EMAIL -->
+                    <td>
+                        {{ user.email }}
+                    </td>
+
+                    <!-- PHONE -->
+                    <td>
+                        {{ user.phone or 'N/A' }}
+                    </td>
+
+                    <!-- ROLE -->
+                    <td>
+
+                        {% if user.role == 'admin' %}
+                            <span class="user-role admin">
+                                Admin
+                            </span>
+                        {% else %}
+                            <span class="user-role user">
+                                User
+                            </span>
+                        {% endif %}
+
+                    </td>
+
+                    <!-- REGISTERED DATE -->
+                    <td>
+                        {{ user.created_at }}
+                    </td>
+
+                    <!-- ACTIONS -->
+                    <td>
+
+                        <div class="user-actions">
+
+                            <a
+                                href="{{ url_for('admin_user_details', userid=user.user_id) }}"
+                                class="action-view"
+                            >
+                                View
+                            </a>
+
+                        </div>
+
+                    </td>
+
+                </tr>
+
+                {% else %}
+
+                <tr>
+                    <td colspan="7" class="no-users">
+                        No users found.
+                    </td>
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}

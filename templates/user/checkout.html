@@ -1,0 +1,298 @@
+
+{% extends "base.html" %}
+
+{% block title %}Checkout | ShopZone{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/user.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="page-header">
+        <h1>Checkout</h1>
+        <p>Complete your order and payment</p>
+    </div>
+
+    <div class="checkout-container">
+
+        <!-- Checkout Form -->
+        <div class="checkout-form">
+
+            <form method="POST" action="{{ url_for('checkout') }}">
+
+                <!-- Delivery Address -->
+                <div class="checkout-card">
+
+                    <h2>Delivery Address</h2>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                pattern="[0-9]{10}"
+                                maxlength="10"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <textarea
+                            id="address"
+                            name="address"
+                            rows="4"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input
+                                type="text"
+                                id="city"
+                                name="city"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <input
+                                type="text"
+                                id="state"
+                                name="state"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pincode">Pincode</label>
+                            <input
+                                type="text"
+                                id="pincode"
+                                name="pincode"
+                                pattern="[0-9]{6}"
+                                maxlength="6"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Payment Method -->
+                <div class="checkout-card">
+
+                    <h2>Payment Method</h2>
+
+                    <div class="payment-options">
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="payment_method"
+                                value="cash"
+                                checked
+                                required
+                            >
+
+                            <div>
+                                <strong>Cash on Delivery</strong>
+                                <p>Pay when your order is delivered.</p>
+                            </div>
+
+                        </label>
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="payment_method"
+                                value="razorpay"
+                                required
+                            >
+
+                            <div>
+                                <strong>Online Payment</strong>
+                                <p>Pay securely using Razorpay.</p>
+                            </div>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <!-- Place Order -->
+                <button
+                    type="submit"
+                    class="btn btn-primary place-order-btn"
+                >
+                    Continue to Payment
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- Order Summary -->
+        <div class="checkout-summary">
+
+            <h2>Order Summary</h2>
+
+            <div class="checkout-items">
+
+                {% for item in cart_items %}
+
+                <div class="checkout-item">
+
+                    <div>
+                        <strong>{{ item.productname }}</strong>
+
+                        <span>
+                            {{ item.quantity }} × ₹{{ item.saleprice }}
+                        </span>
+                    </div>
+
+                    <strong>
+                        ₹{{ item.subtotal }}
+                    </strong>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span>₹{{ subtotal }}</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Shipping</span>
+                <span>₹{{ shipping }}</span>
+            </div>
+
+            <div class="summary-total">
+                <span>Total</span>
+                <strong>₹{{ total }}</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Razorpay Payment -->
+{% if razorpay_order_id %}
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+
+    const options = {
+
+        key: {{ razorpay_key_id | tojson }},
+
+        amount: {{ amount | tojson }},
+
+        currency: "INR",
+
+        name: "ShopZone",
+
+        description: "Product Purchase",
+
+        order_id: {{ razorpay_order_id | tojson }},
+
+        handler: function(response) {
+
+            const form = document.createElement("form");
+
+            form.method = "POST";
+            form.action = {{ url_for('payment_verify') | tojson }};
+
+            const paymentData = {
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_signature: response.razorpay_signature,
+                order_id: {{ order_id | tojson }}
+            };
+
+            for (const key in paymentData) {
+
+                const input = document.createElement("input");
+
+                input.type = "hidden";
+                input.name = key;
+                input.value = paymentData[key];
+
+                form.appendChild(input);
+
+            }
+
+            document.body.appendChild(form);
+            form.submit();
+
+        },
+
+        modal: {
+
+            ondismiss: function() {
+
+                window.location.href =
+                    {{ url_for('payment_failed', order_id=order_id) | tojson }};
+
+            }
+
+        },
+
+        theme: {
+            color: "#3399cc"
+        }
+
+    };
+
+    const razorpay = new Razorpay(options);
+
+    razorpay.on("payment.failed", function() {
+
+        window.location.href =
+            {{ url_for('payment_failed', order_id=order_id) | tojson }};
+
+    });
+
+    window.addEventListener("load", function() {
+        razorpay.open();
+    });
+
+</script>
+
+{% endif %}
+
+{% endblock %}
