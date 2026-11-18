@@ -1,5 +1,6 @@
-import mysql.connector as SQLC
+
 import os
+import psycopg2
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -7,14 +8,13 @@ load_dotenv()
 
 def DatabaseConnection():
     try:
-        db_config = SQLC.connect(
-            host=os.getenv("DB_HOST"),
-            user=os.getenv("DB_USER"),
-            password=os.getenv("DB_PASSWORD"),
-            database=os.getenv("DB_NAME")
+        db_config = psycopg2.connect(
+            os.getenv("DATABASE_URL"),
+            sslmode=os.getenv("DB_SSLMODE", "require")
         )
 
         return db_config
 
-    except SQLC.Error as e:
-        raise Exception(f"Database connection failed: {e}")
+    except psycopg2.Error as e:
+        print("Database Connection Error:", e)
+        raise

@@ -1,11 +1,11 @@
+
 from database.connection import DatabaseConnection
+from psycopg2.extras import RealDictCursor
 
 
 class UserQueries:
 
-    # --------------------------------------------------
     # ADD CART ITEM
-    # --------------------------------------------------
     @staticmethod
     def addCartItem(product_id, userid, quantity):
         db = cursor = None
@@ -17,21 +17,18 @@ class UserQueries:
                 return False, "Invalid quantity"
 
             db = DatabaseConnection()
-            cursor = db.cursor(dictionary=True)
+            cursor = db.cursor(cursor_factory=RealDictCursor)
 
             cursor.execute("""
                 SELECT product_id, quantity
                 FROM products
-                WHERE product_id=%s AND is_active=1
+                WHERE product_id=%s AND is_active=TRUE
             """, (product_id,))
 
             product = cursor.fetchone()
 
             if not product:
                 return False, "Product not available"
-
-            if quantity > product["quantity"]:
-                return False, "Insufficient stock"
 
             cursor.execute("""
                 SELECT cartid, quantity
@@ -41,22 +38,20 @@ class UserQueries:
 
             cart_item = cursor.fetchone()
 
+            new_quantity = quantity
+
             if cart_item:
-                new_quantity = cart_item["quantity"] + quantity
+                new_quantity += cart_item["quantity"]
 
-                if new_quantity > product["quantity"]:
-                    return False, "Insufficient stock"
+            if new_quantity > product["quantity"]:
+                return False, "Insufficient stock"
 
+            if cart_item:
                 cursor.execute("""
                     UPDATE cart
                     SET quantity=%s
                     WHERE cartid=%s AND userid=%s
-                """, (
-                    new_quantity,
-                    cart_item["cartid"],
-                    userid
-                ))
-
+                """, (new_quantity, cart_item["cartid"], userid))
             else:
                 cursor.execute("""
                     INSERT INTO cart(userid, productid, quantity)
@@ -64,13 +59,11 @@ class UserQueries:
                 """, (userid, product_id, quantity))
 
             db.commit()
-
             return True, "Product added to cart"
 
         except Exception as e:
             if db:
                 db.rollback()
-
             print("ADD CART ERROR:", e)
             return False, str(e)
 
@@ -80,18 +73,16 @@ class UserQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # GET CART ITEMS
-    # --------------------------------------------------
     @staticmethod
     def getCartItems(userid):
         db = cursor = None
 
         try:
             db = DatabaseConnection()
-            cursor = db.cursor(dictionary=True)
+            cursor = db.cursor(cursor_factory=RealDictCursor)
 
-            query = """
+            cursor.execute("""
                 SELECT
                     c.cartid,
                     c.userid,
@@ -109,9 +100,7 @@ class UserQueries:
                     ON p.product_id=c.productid
                 WHERE c.userid=%s
                 ORDER BY c.cartid DESC
-            """
-
-            cursor.execute(query, (userid,))
+            """, (userid,))
 
             return True, cursor.fetchall()
 
@@ -125,9 +114,7 @@ class UserQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # UPDATE CART QUANTITY
-    # --------------------------------------------------
     @staticmethod
     def updateCartItemQuantity(cartid, quantity, userid=None):
         db = cursor = None
@@ -139,7 +126,7 @@ class UserQueries:
                 return False, "Quantity must be greater than zero"
 
             db = DatabaseConnection()
-            cursor = db.cursor(dictionary=True)
+            cursor = db.cursor(cursor_factory=RealDictCursor)
 
             query = """
                 SELECT
@@ -159,7 +146,6 @@ class UserQueries:
                 values.append(userid)
 
             cursor.execute(query, tuple(values))
-
             item = cursor.fetchone()
 
             if not item:
@@ -175,13 +161,11 @@ class UserQueries:
             """, (quantity, cartid))
 
             db.commit()
-
             return True, "Cart updated successfully"
 
         except Exception as e:
             if db:
                 db.rollback()
-
             print("UPDATE CART ERROR:", e)
             return False, str(e)
 
@@ -191,9 +175,7 @@ class UserQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # DELETE CART ITEM
-    # --------------------------------------------------
     @staticmethod
     def deleteCartItem(cartid, userid=None):
         db = cursor = None
@@ -202,11 +184,7 @@ class UserQueries:
             db = DatabaseConnection()
             cursor = db.cursor()
 
-            query = """
-                DELETE FROM cart
-                WHERE cartid=%s
-            """
-
+            query = "DELETE FROM cart WHERE cartid=%s"
             values = [cartid]
 
             if userid is not None:
@@ -214,14 +192,15 @@ class UserQueries:
                 values.append(userid)
 
             cursor.execute(query, tuple(values))
+            deleted = cursor.rowcount
+
             db.commit()
 
-            return cursor.rowcount > 0, "Cart item removed"
+            return deleted > 0, "Cart item removed"
 
         except Exception as e:
             if db:
                 db.rollback()
-
             print("DELETE CART ERROR:", e)
             return False, str(e)
 
@@ -231,16 +210,14 @@ class UserQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # GET USER
-    # --------------------------------------------------
     @staticmethod
     def getUser(userid):
         db = cursor = None
 
         try:
             db = DatabaseConnection()
-            cursor = db.cursor(dictionary=True)
+            cursor = db.cursor(cursor_factory=RealDictCursor)
 
             cursor.execute("""
                 SELECT *,
@@ -251,7 +228,6 @@ class UserQueries:
             """, (userid,))
 
             user = cursor.fetchone()
-
             return (True, user) if user else (False, None)
 
         except Exception as e:
@@ -264,16 +240,12 @@ class UserQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # GET USER PROFILE
-    # --------------------------------------------------
     @staticmethod
     def getUserProfile(userid):
         return UserQueries.getUser(userid)
 
-    # --------------------------------------------------
     # UPDATE USER PROFILE
-    # --------------------------------------------------
     @staticmethod
     def updateUserProfile(userid, username, phone, dateofbirth):
         db = cursor = None
@@ -297,13 +269,11 @@ class UserQueries:
             ))
 
             db.commit()
-
             return cursor.rowcount >= 0, "Profile updated successfully"
 
         except Exception as e:
             if db:
                 db.rollback()
-
             print("UPDATE PROFILE ERROR:", e)
             return False, str(e)
 
@@ -313,9 +283,7 @@ class UserQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # CREATE ORDER
-    # --------------------------------------------------
     @staticmethod
     def createOrder(
         userid,
@@ -328,8 +296,7 @@ class UserQueries:
 
         try:
             db = DatabaseConnection()
-            db.start_transaction()
-            cursor = db.cursor(dictionary=True)
+            cursor = db.cursor(cursor_factory=RealDictCursor)
 
             cursor.execute("""
                 SELECT
@@ -344,7 +311,7 @@ class UserQueries:
                 JOIN products p
                     ON p.product_id=c.productid
                 WHERE c.userid=%s
-                FOR UPDATE
+                FOR UPDATE OF c, p
             """, (userid,))
 
             cart_items = cursor.fetchall()
@@ -356,22 +323,15 @@ class UserQueries:
             subtotal = 0.0
 
             for item in cart_items:
-
                 if not item["is_active"]:
                     db.rollback()
-                    return False, (
-                        f'{item["product_name"]} is not available'
-                    )
+                    return False, f'{item["product_name"]} is not available'
 
                 if item["quantity"] > item["stock"]:
                     db.rollback()
-                    return False, (
-                        f'Insufficient stock for {item["product_name"]}'
-                    )
+                    return False, f'Insufficient stock for {item["product_name"]}'
 
-                subtotal += (
-                    float(item["saleprice"]) * item["quantity"]
-                )
+                subtotal += float(item["saleprice"]) * item["quantity"]
 
             shipping = round(subtotal * 0.01, 2)
             total = round(subtotal + shipping, 2)
@@ -380,17 +340,12 @@ class UserQueries:
                 INSERT INTO orders
                 (user_id, status, address, total)
                 VALUES(%s, %s, %s, %s)
-            """, (
-                userid,
-                "pending",
-                address,
-                total
-            ))
+                RETURNING order_id
+            """, (userid, "pending", address, total))
 
-            orderid = cursor.lastrowid
+            orderid = cursor.fetchone()["order_id"]
 
             for item in cart_items:
-
                 cursor.execute("""
                     INSERT INTO orderdetails
                     (order_id, product_id, quantity, price)
@@ -453,7 +408,6 @@ class UserQueries:
         except Exception as e:
             if db:
                 db.rollback()
-
             print("CREATE ORDER ERROR:", e)
             return False, str(e)
 
@@ -463,39 +417,49 @@ class UserQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # GET USER ORDERS
-    # --------------------------------------------------
     @staticmethod
     def getOrders(userid):
         db = cursor = None
 
         try:
             db = DatabaseConnection()
-            cursor = db.cursor(dictionary=True)
+            cursor = db.cursor(cursor_factory=RealDictCursor)
 
-            query = """
+            cursor.execute("""
                 SELECT
                     o.order_id AS id,
                     o.order_id AS orderid,
                     o.order_id AS order_id,
                     o.status,
                     o.total AS total_amount,
-                    o.total,
                     o.address,
                     o.created_at,
+
+                    p.payment_id AS payment_id,
                     p.method AS payment_method,
                     p.status AS payment_status,
                     p.amount AS payment_amount,
-                    p.razorpay_payment_id
+                    p.razorpay_payment_id AS payment_id_reference,
+
+                    COALESCE(
+                        (
+                            SELECT SUM(od.quantity)
+                            FROM orderdetails od
+                            WHERE od.order_id=o.order_id
+                        ), 0
+                    ) AS item_count
+
                 FROM orders o
+
                 LEFT JOIN payment p
                     ON p.order_id=o.order_id
-                WHERE o.user_id=%s
-                ORDER BY o.created_at DESC
-            """
+                    AND p.user_id=o.user_id
 
-            cursor.execute(query, (userid,))
+                WHERE o.user_id=%s
+
+                ORDER BY o.created_at DESC
+            """, (userid,))
 
             return True, cursor.fetchall()
 
@@ -509,18 +473,16 @@ class UserQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # GET ORDER DETAILS
-    # --------------------------------------------------
     @staticmethod
     def getOrderDetails(orderid, userid):
         db = cursor = None
 
         try:
             db = DatabaseConnection()
-            cursor = db.cursor(dictionary=True)
+            cursor = db.cursor(cursor_factory=RealDictCursor)
 
-            query = """
+            cursor.execute("""
                 SELECT
                     o.order_id AS id,
                     o.order_id AS orderid,
@@ -538,6 +500,7 @@ class UserQueries:
                     p.method AS payment_method,
                     p.status AS payment_status,
                     p.amount AS payment_amount,
+                    p.payment_id,
                     p.razorpay_order_id,
                     p.razorpay_payment_id
                 FROM orders o
@@ -545,11 +508,10 @@ class UserQueries:
                     ON u.user_id=o.user_id
                 LEFT JOIN payment p
                     ON p.order_id=o.order_id
+                    AND p.user_id=o.user_id
                 WHERE o.order_id=%s
                 AND o.user_id=%s
-            """
-
-            cursor.execute(query, (orderid, userid))
+            """, (orderid, userid))
 
             order = cursor.fetchone()
 
@@ -601,22 +563,14 @@ class UserQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # MARK RAZORPAY PAYMENT AS PAID
-    # --------------------------------------------------
     @staticmethod
-    def markPaid(
-        userid,
-        orderid,
-        razorpay_order_id,
-        payment_id
-    ):
+    def markPaid(userid, orderid, razorpay_order_id, payment_id):
         db = cursor = None
 
         try:
             db = DatabaseConnection()
-            db.start_transaction()
-            cursor = db.cursor(dictionary=True)
+            cursor = db.cursor(cursor_factory=RealDictCursor)
 
             cursor.execute("""
                 SELECT payment_id, status
@@ -625,11 +579,7 @@ class UserQueries:
                 AND order_id=%s
                 AND razorpay_order_id=%s
                 FOR UPDATE
-            """, (
-                userid,
-                orderid,
-                razorpay_order_id
-            ))
+            """, (userid, orderid, razorpay_order_id))
 
             payment = cursor.fetchone()
 
@@ -646,19 +596,20 @@ class UserQueries:
                 SET status='paid',
                     razorpay_payment_id=%s
                 WHERE payment_id=%s
-            """, (
-                payment_id,
-                payment["payment_id"]
-            ))
+            """, (payment_id, payment["payment_id"]))
+
+            cursor.execute("""
+                UPDATE orders
+                SET status='confirmed'
+                WHERE order_id=%s AND user_id=%s
+            """, (orderid, userid))
 
             db.commit()
-
             return True, "Payment successful"
 
         except Exception as e:
             if db:
                 db.rollback()
-
             print("MARK PAID ERROR:", e)
             return False, str(e)
 
@@ -668,17 +619,14 @@ class UserQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # FAIL PAYMENT
-    # --------------------------------------------------
     @staticmethod
     def failPayment(userid, orderid, reason=None):
         db = cursor = None
 
         try:
             db = DatabaseConnection()
-            db.start_transaction()
-            cursor = db.cursor(dictionary=True)
+            cursor = db.cursor(cursor_factory=RealDictCursor)
 
             cursor.execute("""
                 SELECT status
@@ -729,33 +677,26 @@ class UserQueries:
                     UPDATE products
                     SET quantity=quantity+%s
                     WHERE product_id=%s
-                """, (
-                    item["quantity"],
-                    item["product_id"]
-                ))
+                """, (item["quantity"], item["product_id"]))
 
             cursor.execute("""
                 UPDATE payment
                 SET status='failed'
-                WHERE order_id=%s
-                AND user_id=%s
+                WHERE order_id=%s AND user_id=%s
             """, (orderid, userid))
 
             cursor.execute("""
                 UPDATE orders
                 SET status='cancelled'
-                WHERE order_id=%s
-                AND user_id=%s
+                WHERE order_id=%s AND user_id=%s
             """, (orderid, userid))
 
             db.commit()
-
             return True, "Payment failed and order cancelled"
 
         except Exception as e:
             if db:
                 db.rollback()
-
             print("FAIL PAYMENT ERROR:", e)
             return False, str(e)
 
@@ -765,9 +706,7 @@ class UserQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # CANCEL PENDING ORDER
-    # --------------------------------------------------
     @staticmethod
     def cancelPendingOrder(userid, orderid):
         return UserQueries.failPayment(

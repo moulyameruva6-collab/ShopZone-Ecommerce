@@ -21,7 +21,7 @@
         </a>
     </div>
 
-    {% if orders %}
+    {% if orders and orders|length > 0 %}
 
         <div class="orders-list">
 
@@ -30,68 +30,52 @@
             <div class="order-card">
 
                 <div class="order-header">
-
                     <div>
-                        <h3>Order #{{ order.id }}</h3>
-                        <p>Placed on: {{ order.created_at }}</p>
+                        <h3>Order #{{ order.order_id }}</h3>
+                        <p>Placed on: {{ order.created_at or 'N/A' }}</p>
                     </div>
 
                     <div class="order-status">
-                        <span class="status status-{{ order.status|lower }}">
-                            {{ order.status }}
+                        <span class="status status-{{ (order.status or 'pending')|lower }}">
+                            {{ order.status or 'Pending' }}
                         </span>
                     </div>
-
                 </div>
 
                 <div class="order-info">
 
                     <div class="order-info-item">
                         <span>Items</span>
-                        <strong>{{ order.item_count }}</strong>
+                        <strong>{{ order.item_count or 0 }}</strong>
                     </div>
 
                     <div class="order-info-item">
                         <span>Total Amount</span>
-                        <strong>₹{{ order.total_amount }}</strong>
+                        <strong>₹{{ order.total_amount or 0 }}</strong>
                     </div>
 
                     <div class="order-info-item">
                         <span>Payment Method</span>
-                        <strong>{{ order.payment_method }}</strong>
+                        <strong>{{ order.payment_method or 'N/A' }}</strong>
                     </div>
 
                     <div class="order-info-item">
                         <span>Payment Status</span>
-                        <strong class="payment-{{ order.payment_status|lower }}">
-                            {{ order.payment_status }}
-                        </strong>
+                        <strong>{{ order.payment_status or 'Pending' }}</strong>
                     </div>
 
                 </div>
 
-                {% if order.payment_id %}
-                <div class="payment-id">
-                    <span>Payment ID:</span>
-                    {{ order.payment_id }}
-                </div>
-                {% endif %}
-
                 <div class="order-actions">
 
-                    <a href="{{ url_for('order_details', order_id=order.id) }}"
+                    <a href="{{ url_for('user_order_details', order_id=order.order_id) }}"
                        class="btn btn-secondary">
                         View Order
                     </a>
 
-                    <a href="{{ url_for('invoice', order_id=order.id) }}"
+                    <a href="{{ url_for('invoice', order_id=order.order_id) }}"
                        class="btn btn-secondary">
                         View Invoice
-                    </a>
-
-                    <a href="{{ url_for('download_invoice', order_id=order.id) }}"
-                       class="btn btn-primary">
-                        Download Invoice
                     </a>
 
                 </div>

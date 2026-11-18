@@ -1,11 +1,11 @@
+
 from database.connection import DatabaseConnection
+from psycopg2.extras import RealDictCursor
 
 
 class AdminQueries:
 
-    # --------------------------------------------------
     # INSERT PRODUCT
-    # --------------------------------------------------
     @staticmethod
     def insertProductRecord(product_data):
         db = cursor = None
@@ -39,9 +39,7 @@ class AdminQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # GET ALL PRODUCTS / SINGLE PRODUCT
-    # --------------------------------------------------
     @staticmethod
     def getAllProducts(
         product_name=None,
@@ -54,7 +52,7 @@ class AdminQueries:
 
         try:
             db = DatabaseConnection()
-            cursor = db.cursor(dictionary=True)
+            cursor = db.cursor(cursor_factory=RealDictCursor)
 
             query = """
                 SELECT *,
@@ -83,7 +81,6 @@ class AdminQueries:
 
             page_no = max(int(page_no), 1)
             per_page = max(int(per_page), 1)
-
             offset = (page_no - 1) * per_page
 
             query += """
@@ -92,7 +89,6 @@ class AdminQueries:
             """
 
             values.extend([per_page, offset])
-
             cursor.execute(query, tuple(values))
 
             return True, cursor.fetchall()
@@ -107,9 +103,7 @@ class AdminQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # GET CATEGORIES
-    # --------------------------------------------------
     @staticmethod
     def getAllCategories():
         db = cursor = None
@@ -138,9 +132,7 @@ class AdminQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # UPDATE PRODUCT
-    # --------------------------------------------------
     @staticmethod
     def updateProductRecord(product_data):
         db = cursor = None
@@ -178,16 +170,12 @@ class AdminQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # DELETE PRODUCT (SOFT DELETE)
-    # --------------------------------------------------
     @staticmethod
     def deleteProduct(product_id):
         return AdminQueries.deactivateProduct(product_id)
 
-    # --------------------------------------------------
     # DEACTIVATE PRODUCT
-    # --------------------------------------------------
     @staticmethod
     def deactivateProduct(product_id):
         db = cursor = None
@@ -198,7 +186,7 @@ class AdminQueries:
 
             cursor.execute("""
                 UPDATE products
-                SET is_active=0
+                SET is_active=FALSE
                 WHERE product_id=%s
             """, (product_id,))
 
@@ -219,9 +207,7 @@ class AdminQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # ACTIVATE PRODUCT
-    # --------------------------------------------------
     @staticmethod
     def activateProduct(product_id):
         db = cursor = None
@@ -232,7 +218,7 @@ class AdminQueries:
 
             cursor.execute("""
                 UPDATE products
-                SET is_active=1
+                SET is_active=TRUE
                 WHERE product_id=%s
             """, (product_id,))
 
@@ -253,9 +239,7 @@ class AdminQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # CHANGE PRODUCT STATUS
-    # --------------------------------------------------
     @staticmethod
     def chengeProductActivateStatus(product_id, status):
         if status:
@@ -263,9 +247,7 @@ class AdminQueries:
 
         return AdminQueries.deactivateProduct(product_id)
 
-    # --------------------------------------------------
     # GET FILTERED PRODUCTS WITH PAGINATION
-    # --------------------------------------------------
     @staticmethod
     def getProducts(
         search="",
@@ -281,7 +263,7 @@ class AdminQueries:
 
         try:
             db = DatabaseConnection()
-            cursor = db.cursor(dictionary=True)
+            cursor = db.cursor(cursor_factory=RealDictCursor)
 
             conditions = ["1=1"]
             values = []
@@ -290,7 +272,6 @@ class AdminQueries:
                 conditions.append(
                     "(product_name LIKE %s OR category LIKE %s)"
                 )
-
                 values.extend([
                     f"%{search}%",
                     f"%{search}%"
@@ -301,10 +282,10 @@ class AdminQueries:
                 values.append(category)
 
             if status == "active":
-                conditions.append("is_active=1")
+                conditions.append("is_active=TRUE")
 
             elif status == "inactive":
-                conditions.append("is_active=0")
+                conditions.append("is_active=FALSE")
 
             if stock == "available":
                 conditions.append("quantity > 5")
@@ -349,7 +330,6 @@ class AdminQueries:
 
             page = max(int(page), 1)
             per_page = max(int(per_page), 1)
-
             offset = (page - 1) * per_page
 
             query = f"""
@@ -363,7 +343,6 @@ class AdminQueries:
             """
 
             query_values = values + [per_page, offset]
-
             cursor.execute(query, tuple(query_values))
 
             products = cursor.fetchall()
@@ -389,16 +368,14 @@ class AdminQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # GET ALL USERS
-    # --------------------------------------------------
     @staticmethod
     def getUsers():
         db = cursor = None
 
         try:
             db = DatabaseConnection()
-            cursor = db.cursor(dictionary=True)
+            cursor = db.cursor(cursor_factory=RealDictCursor)
 
             cursor.execute("""
                 SELECT *,
@@ -420,16 +397,14 @@ class AdminQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # GET USER BY ID
-    # --------------------------------------------------
     @staticmethod
     def getUserById(userid):
         db = cursor = None
 
         try:
             db = DatabaseConnection()
-            cursor = db.cursor(dictionary=True)
+            cursor = db.cursor(cursor_factory=RealDictCursor)
 
             cursor.execute("""
                 SELECT *,
@@ -451,16 +426,12 @@ class AdminQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # GET USER DETAILS
-    # --------------------------------------------------
     @staticmethod
     def getUserDetails(userid):
         return AdminQueries.getUserById(userid)
 
-    # --------------------------------------------------
     # UPDATE USER
-    # --------------------------------------------------
     @staticmethod
     def updateUser(user_data):
         db = cursor = None
@@ -497,16 +468,14 @@ class AdminQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # GET ALL ORDERS
-    # --------------------------------------------------
     @staticmethod
     def getOrders(search=None, status=None):
         db = cursor = None
 
         try:
             db = DatabaseConnection()
-            cursor = db.cursor(dictionary=True)
+            cursor = db.cursor(cursor_factory=RealDictCursor)
 
             query = """
                 SELECT
@@ -543,7 +512,7 @@ class AdminQueries:
             if search:
                 query += """
                     AND (
-                        CAST(o.order_id AS CHAR) LIKE %s
+                        CAST(o.order_id AS TEXT) LIKE %s
                         OR u.username LIKE %s
                         OR u.email LIKE %s
                     )
@@ -575,16 +544,14 @@ class AdminQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # GET ORDER BY ID
-    # --------------------------------------------------
     @staticmethod
     def getOrderById(order_id):
         db = cursor = None
 
         try:
             db = DatabaseConnection()
-            cursor = db.cursor(dictionary=True)
+            cursor = db.cursor(cursor_factory=RealDictCursor)
 
             query = """
                 SELECT
@@ -612,7 +579,6 @@ class AdminQueries:
             """
 
             cursor.execute(query, (order_id,))
-
             return cursor.fetchone()
 
         except Exception as e:
@@ -625,16 +591,14 @@ class AdminQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # GET ORDER ITEMS
-    # --------------------------------------------------
     @staticmethod
     def getOrderItems(order_id):
         db = cursor = None
 
         try:
             db = DatabaseConnection()
-            cursor = db.cursor(dictionary=True)
+            cursor = db.cursor(cursor_factory=RealDictCursor)
 
             query = """
                 SELECT
@@ -656,7 +620,6 @@ class AdminQueries:
             """
 
             cursor.execute(query, (order_id,))
-
             return cursor.fetchall()
 
         except Exception as e:
@@ -669,9 +632,7 @@ class AdminQueries:
             if db:
                 db.close()
 
-    # --------------------------------------------------
     # GET COMPLETE ORDER DETAILS
-    # --------------------------------------------------
     @staticmethod
     def getOrderDetails(order_id):
         order = AdminQueries.getOrderById(order_id)
@@ -695,17 +656,14 @@ class AdminQueries:
 
         return order
 
-    # --------------------------------------------------
     # UPDATE ORDER STATUS
-    # --------------------------------------------------
     @staticmethod
     def updateOrderStatus(order_id, status):
         db = cursor = None
 
         try:
             db = DatabaseConnection()
-            db.start_transaction()
-            cursor = db.cursor(dictionary=True)
+            cursor = db.cursor(cursor_factory=RealDictCursor)
 
             cursor.execute("""
                 SELECT status

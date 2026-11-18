@@ -3,6 +3,7 @@ import os
 import uuid
 import bcrypt
 import razorpay
+import logging
 
 from decimal import Decimal
 from functools import wraps
@@ -22,7 +23,10 @@ from flask import (
 from werkzeug.utils import secure_filename
 from werkzeug.security import check_password_hash
 
-from database import AuthQueries, AdminQueries, UserQueries
+# PostgreSQL database imports
+from database.utilsDB import AuthQueries
+from database.adminDB import AdminQueries
+from database.userDB import UserQueries
 
 
 # ======================================================
@@ -34,6 +38,12 @@ load_dotenv()
 app = Flask(__name__)
 
 app.secret_key = os.getenv("FLASK_SECRET_KEY")
+
+logging.basicConfig(
+    filename="app.log",
+    level=logging.INFO,
+    format="[%(asctime)s] - %(levelname)s: %(message)s"
+)
 
 RAZORPAY_KEY_ID = os.getenv("RAZORPAY_KEY_ID")
 RAZORPAY_KEY_SECRET = os.getenv("RAZORPAY_KEY_SECRET")
@@ -70,8 +80,7 @@ def money(value):
 def allowed_file(filename):
     return (
         "." in filename
-        and filename.rsplit(".", 1)[1].lower()
-        in ALLOWED_EXTENSIONS
+        and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
     )
 
 
@@ -228,54 +237,52 @@ def home():
 @app.route("/register", methods=["GET", "POST"])
 def register():
 
-    if request.method == "POST":
+    if request.method == "GET":
+        logging.info("User in register page")
+        return render_template("register.html")
 
-        username = request.form.get(
-            "username",
-            ""
-        ).strip()
+    name = request.form.get("name")
+    email = request.form.get("email")
+    phone = request.form.get("phone")
+    password = request.form.get("password")
+    confirm_password = request.form.get("confirm_password")
 
-        email = request.form.get(
-            "email",
-            ""
-        ).strip().lower()
+    if not all([name, email, password, confirm_password]):
+        flash("Please fill all required fields", "err")
+        return redirect(url_for("register"))
 
-        password = request.form.get("password", "")
+    if password != confirm_password:
+        flash("Password Mismatch", "err")
+        return redirect(url_for("register"))
 
-        phone = request.form.get(
-            "phone",
-            ""
-        ).strip()
+    status, user = AuthQueries.getUserData(email=email)
 
-        if not username or not email or not password:
-            flash("Please fill all required fields", "danger")
-            return redirect(url_for("register"))
+    if status:
+        flash("Email Already Exists", "err")
+        logging.warning(f"{email} Email Already Exists")
+        return redirect(url_for("register"))
 
-        status, user = AuthQueries.getUserData(email)
+    hash_password = bcrypt.hashpw(
+        password=password.encode("utf-8"),
+        salt=bcrypt.gensalt(4)
+    )
 
-        if status:
-            flash("Email already registered", "danger")
-            return redirect(url_for("register"))
+    status, msg = AuthQueries.createUserAccount(
+        name=name,
+        email=email,
+        password=hash_password,
+        phone=phone
+    )
 
-        hashed_password = bcrypt.hashpw(
-            password.encode("utf-8"),
-            bcrypt.gensalt()
-        ).decode("utf-8")
+    if not status:
+        flash(msg, "err")
+        logging.warning(msg)
+        return redirect(url_for("register"))
 
-        status, message = AuthQueries.createUserAccount(
-            username,
-            email,
-            hashed_password,
-            phone
-        )
+    flash(msg, "msg")
+    logging.info(msg)
 
-        if status:
-            flash("Registration successful. Please login.", "success")
-            return redirect(url_for("login"))
-
-        flash(str(message), "danger")
-
-    return render_template("register.html")
+    return redirect(url_for("login"))
 
 
 # ======================================================
@@ -285,70 +292,79 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
 
-    if request.method == "POST":
+    if request.method == "GET":
+        logging.info("User in login page")
+        return render_template("login.html")
 
-        email = request.form.get(
-            "email",
-            ""
-        ).strip().lower()
+    email = request.form.get("email", "").strip()
+    password = request.form.get("password", "")
 
-        password = request.form.get(
-            "password",
-            ""
-        )
+    if not email or not password:
+        flash("Please enter email and password", "err")
+        return redirect(url_for("login"))
 
-        if not email or not password:
-            flash("Enter email and password", "danger")
-            return redirect(url_for("login"))
+    status, user = AuthQueries.getUserData(email=email)
 
-        user_status, user = AuthQueries.getUserData(email)
+    if not status:
+        flash(user, "err")
+        logging.warning(user)
+        return redirect(url_for("login"))
 
-        if not user_status:
-            flash("Invalid email or password", "danger")
-            return redirect(url_for("login"))
+    try:
 
-        stored_password = user.get("hashpassword", "")
+        stored_password = user["hashpassword"]
 
-        password_valid = False
+        if isinstance(stored_password, memoryview):
+            stored_password = stored_password.tobytes()
 
-        try:
-            password_valid = bcrypt.checkpw(
+        if isinstance(stored_password, bytes):
+            stored_password = stored_password.decode("utf-8")
+
+        if stored_password.startswith(("scrypt:", "pbkdf2:")):
+
+            verify_password_status = check_password_hash(
+                stored_password,
+                password
+            )
+
+        elif stored_password.startswith(("$2a$", "$2b$", "$2y$")):
+
+            verify_password_status = bcrypt.checkpw(
                 password.encode("utf-8"),
                 stored_password.encode("utf-8")
             )
 
-        except ValueError:
-            try:
-                password_valid = check_password_hash(
-                    stored_password,
-                    password
-                )
-            except Exception:
-                password_valid = False
+        else:
+            verify_password_status = False
 
-        if not password_valid:
-            flash("Invalid email or password", "danger")
-            return redirect(url_for("login"))
+    except (ValueError, TypeError):
+        logging.exception("Password verification error")
+        verify_password_status = False
 
-        if not user.get("is_active", 1):
-            flash("Your account is inactive", "danger")
-            return redirect(url_for("login"))
+    if not verify_password_status:
+        flash("Password incorrect", "err")
+        logging.warning("Password incorrect")
+        return redirect(url_for("login"))
 
-        session.clear()
+    user_id = user.get("userid", user.get("user_id"))
 
-        session["userid"] = user["user_id"]
-        session["username"] = user["username"]
-        session["email"] = user["email"]
-        session["role"] = user["role"]
+    if user_id is None:
+        flash("User ID not found", "err")
+        return redirect(url_for("login"))
 
-        flash("Login successful", "success")
+    session.clear()
 
-        if user["role"] == "admin":
-            return redirect(url_for("admin_dashboard"))
+    session["username"] = user["username"]
+    session["role"] = user["role"]
+    session["userid"] = user_id
+    session["email"] = user["email"]
 
-        return redirect(url_for("home"))
+    if user["role"] == "admin":
+        logging.info(f"{user['username']} entering admin dashboard")
+        return redirect(url_for("admin_dashboard"))
 
-    return render_template("login.html")
+    logging.info(f"{user['username']} entering products page")
+    return redirect(url_for("products"))
 
 
 # ======================================================
@@ -469,9 +485,7 @@ def add_to_cart(product_id):
     else:
         flash(message, "danger")
 
-    return redirect(
-        request.referrer or url_for("products")
-    )
+    return redirect(request.referrer or url_for("products"))
 
 
 # ======================================================
@@ -537,10 +551,7 @@ def checkout():
 
     if request.method == "POST":
 
-        address = request.form.get(
-            "address",
-            ""
-        ).strip()
+        address = request.form.get("address", "").strip()
 
         payment_method = request.form.get(
             "payment_method",
@@ -607,9 +618,9 @@ def checkout():
                     amount=int(total * 100)
                 )
 
-            except Exception as e:
+            except Exception:
 
-                print("RAZORPAY CHECKOUT ERROR:", e)
+                logging.exception("Razorpay checkout error")
 
                 flash(
                     "Unable to initialize Razorpay payment",
@@ -631,7 +642,6 @@ def checkout():
         total=total,
         razorpay_key_id=RAZORPAY_KEY_ID
     )
-
 
 # ======================================================
 # RAZORPAY PAYMENT VERIFY
@@ -666,12 +676,32 @@ def payment_verify():
 
         client = razorpay_client()
 
+        # VERIFY PAYMENT SIGNATURE
         client.utility.verify_payment_signature({
             "razorpay_order_id": razorpay_order_id,
             "razorpay_payment_id": razorpay_payment_id,
             "razorpay_signature": razorpay_signature
         })
 
+        # FETCH PAYMENT DETAILS FROM RAZORPAY
+        payment_details = client.payment.fetch(
+            razorpay_payment_id
+        )
+
+        # VERIFY ORDER ID
+        if payment_details.get("order_id") != razorpay_order_id:
+            flash("Payment order ID mismatch", "danger")
+            return redirect(url_for("orders"))
+
+        # CHECK PAYMENT STATUS
+        if payment_details.get("status") != "captured":
+            flash(
+                "Payment is not captured yet. Please check payment status.",
+                "warning"
+            )
+            return redirect(url_for("orders"))
+
+        # UPDATE DATABASE
         status, message = UserQueries.markPaid(
             userid,
             order_id,
@@ -679,62 +709,41 @@ def payment_verify():
             razorpay_payment_id
         )
 
-        if status:
+        if not status:
 
-            session.pop("pending_order_id", None)
-
-            flash("Payment successful", "success")
-
-            return redirect(
-                url_for(
-                    "order_success",
-                    order_id=order_id
-                )
+            logging.error(
+                "Payment captured but database update failed: %s",
+                message
             )
 
-        flash(str(message), "danger")
+            flash(
+                "Payment received, but order update is pending. Please contact support.",
+                "warning"
+            )
 
-    except Exception as e:
+            return redirect(url_for("orders"))
 
-        print("PAYMENT VERIFY ERROR:", e)
+        session.pop("pending_order_id", None)
 
-        order_id = request.form.get("order_id")
+        flash("Payment successful", "success")
+        return redirect(url_for("orders"))
+        
 
-        if order_id:
-            try:
-                UserQueries.failPayment(
-                    userid,
-                    int(order_id),
-                    str(e)
-                )
-            except Exception:
-                pass
+    except Exception:
 
-        flash("Payment verification failed", "danger")
+        logging.exception("Payment verification error")
 
-    return redirect(url_for("orders"))
+        # DO NOT CANCEL THE ORDER HERE.
+        # Payment may already be captured in Razorpay.
+
+        flash(
+            "Payment verification could not be completed. Please check your order status.",
+            "warning"
+        )
+
+        return redirect(url_for("orders"))
 
 
-# ======================================================
-# PAYMENT SUCCESS
-# ======================================================
-
-@app.route("/payment/success/<int:order_id>")
-@login_required
-def order_success(order_id):
-
-    status, order = UserQueries.getOrderDetails(
-        order_id,
-        session["userid"]
-    )
-
-    if not status or not order:
-        abort(404)
-
-    return render_template(
-        "user/payment_success.html",
-        order=order
-    )
 
 # ======================================================
 # DOWNLOAD INVOICE
@@ -776,8 +785,8 @@ def payment_failed():
                 int(order_id),
                 "Payment failed"
             )
-        except Exception as e:
-            print("PAYMENT FAILED ERROR:", e)
+        except Exception:
+            logging.exception("Payment failed update error")
 
     session.pop("pending_order_id", None)
 
@@ -790,10 +799,7 @@ def payment_failed():
 # CANCEL ORDER
 # ======================================================
 
-@app.route(
-    "/payment/cancel/<int:order_id>",
-    methods=["POST"]
-)
+@app.route("/payment/cancel/<int:order_id>", methods=["POST"])
 @login_required
 def cancel_order(order_id):
 
@@ -819,18 +825,22 @@ def cancel_order(order_id):
 @app.route("/orders")
 @login_required
 def orders():
+    try:
+        userid = session.get("userid")
 
-    status, order_list = UserQueries.getOrders(
-        session["userid"]
-    )
+        status, order_list = UserQueries.getOrders(userid)
 
-    if not status:
-        order_list = []
+        if not status:
+            order_list = []
 
-    return render_template(
-        "user/orders.html",
-        orders=order_list
-    )
+        return render_template(
+            "user/orders.html",
+            orders=order_list
+        )
+
+    except Exception as e:
+        app.logger.exception("MY ORDERS PAGE ERROR")
+        return "Orders Page Error: " + str(e), 500
 
 
 # ======================================================
@@ -884,19 +894,9 @@ def profile():
 @login_required
 def update_profile():
 
-    username = request.form.get(
-        "username",
-        ""
-    ).strip()
-
-    phone = request.form.get(
-        "phone",
-        ""
-    ).strip()
-
-    dateofbirth = request.form.get(
-        "dateofbirth"
-    ) or None
+    username = request.form.get("username", "").strip()
+    phone = request.form.get("phone", "").strip()
+    dateofbirth = request.form.get("dateofbirth") or None
 
     if not username:
         flash("Username is required", "danger")
@@ -936,9 +936,7 @@ def admin_dashboard():
     order_status, orders_list = AdminQueries.getOrders()
 
     total_users = len(users) if user_status else 0
-
     total_products = len(products) if product_status else 0
-
     total_orders = len(orders_list) if order_status else 0
 
     return render_template(
@@ -957,15 +955,8 @@ def admin_dashboard():
 @admin_required
 def admin_users():
 
-    search = request.args.get(
-        "search",
-        ""
-    ).strip()
-
-    role = request.args.get(
-        "role",
-        ""
-    ).strip()
+    search = request.args.get("search", "").strip()
+    role = request.args.get("role", "").strip()
 
     status, users = AdminQueries.getUsers()
 
@@ -1020,10 +1011,7 @@ def admin_user_details(userid):
 # ADMIN USER STATUS
 # ======================================================
 
-@app.route(
-    "/admin/users/status/<int:userid>",
-    methods=["POST"]
-)
+@app.route("/admin/users/status/<int:userid>", methods=["POST"])
 @admin_required
 def admin_update_user_status(userid):
 
@@ -1064,7 +1052,6 @@ def admin_products():
     category = request.args.get("category", "").strip()
 
     page = request.args.get("page", 1, type=int)
-
     page = max(page, 1)
 
     result = AdminQueries.getProducts(
@@ -1075,15 +1062,10 @@ def admin_products():
     )
 
     products_list = result["products"]
-
     total = result["total"]
-
-    total_pages = max(
-        1,
-        (total + 6) // 7
-    )
-
     categories = result["categories"]
+
+    total_pages = max(1, (total + 6) // 7)
 
     return render_template(
         "admin/products.html",
@@ -1100,72 +1082,33 @@ def admin_products():
 # ADMIN ADD PRODUCT
 # ======================================================
 
-@app.route(
-    "/admin/add-product",
-    methods=["GET", "POST"]
-)
+@app.route("/admin/add-product", methods=["GET", "POST"])
 @admin_required
 def admin_add_products():
 
     if request.method == "POST":
 
-        # PRODUCT NAME
-        product_name = request.form.get(
-            "name",
-            ""
-        ).strip()
+        product_name = request.form.get("name", "").strip()
 
-        # EXISTING CATEGORY
-        category = request.form.get(
-            "category",
-            ""
-        ).strip()
+        category = request.form.get("category", "").strip()
+        new_category = request.form.get("new_category", "").strip()
 
-        # NEW CATEGORY
-        new_category = request.form.get(
-            "new_category",
-            ""
-        ).strip()
-
-        # NEW CATEGORY HAS PRIORITY
         if new_category:
             category = new_category
 
-        # PRICE
-        saleprice = request.form.get(
-            "price",
-            "0"
-        )
+        saleprice = request.form.get("price", "0")
+        quantity = request.form.get("stock", "0")
+        description = request.form.get("description", "").strip()
 
-        # STOCK
-        quantity = request.form.get(
-            "stock",
-            "0"
-        )
-
-        # DESCRIPTION
-        description = request.form.get(
-            "description",
-            ""
-        ).strip()
-
-        # IMAGE
         image_file = request.files.get("image")
 
-        # VALIDATION
         if not product_name or not category:
-
-            flash(
-                "Product name and category are required",
-                "danger"
-            )
-
+            flash("Product name and category are required", "danger")
             return redirect(url_for("admin_add_products"))
 
         try:
 
             saleprice = Decimal(saleprice)
-
             quantity = int(quantity)
 
             if saleprice < 0 or quantity < 0:
@@ -1173,33 +1116,20 @@ def admin_add_products():
 
         except Exception:
 
-            flash(
-                "Enter valid price and stock",
-                "danger"
-            )
-
+            flash("Enter valid price and stock", "danger")
             return redirect(url_for("admin_add_products"))
 
-        # IMAGE SAVE
         imgname = None
         storedpath = None
 
         if image_file and image_file.filename:
 
-            imgname, storedpath = save_product_image(
-                image_file
-            )
+            imgname, storedpath = save_product_image(image_file)
 
             if not imgname:
-
-                flash(
-                    "Invalid image file",
-                    "danger"
-                )
-
+                flash("Invalid image file", "danger")
                 return redirect(url_for("admin_add_products"))
 
-        # PRODUCT DATA
         product_data = (
             product_name,
             description,
@@ -1210,26 +1140,16 @@ def admin_add_products():
             storedpath
         )
 
-        # INSERT PRODUCT
         status, message = AdminQueries.insertProductRecord(
             product_data
         )
 
         if status:
-
-            flash(
-                message,
-                "success"
-            )
-
+            flash(message, "success")
             return redirect(url_for("admin_products"))
 
-        flash(
-            message,
-            "danger"
-        )
+        flash(message, "danger")
 
-    # LOAD CATEGORIES
     category_status, categories = AdminQueries.getAllCategories()
 
     if not category_status:
@@ -1245,10 +1165,7 @@ def admin_add_products():
 # ADMIN EDIT PRODUCT
 # ======================================================
 
-@app.route(
-    "/admin/edit-product/<int:product_id>",
-    methods=["GET", "POST"]
-)
+@app.route("/admin/edit-product/<int:product_id>", methods=["GET", "POST"])
 @admin_required
 def admin_edit_product(product_id):
 
@@ -1261,49 +1178,21 @@ def admin_edit_product(product_id):
 
     if request.method == "POST":
 
-        product_name = request.form.get(
-            "name",
-            ""
-        ).strip()
-
-        category = request.form.get(
-            "category",
-            ""
-        ).strip()
-
-        saleprice = request.form.get(
-            "price",
-            "0"
-        )
-
-        quantity = request.form.get(
-            "stock",
-            "0"
-        )
-
-        description = request.form.get(
-            "description",
-            ""
-        ).strip()
+        product_name = request.form.get("name", "").strip()
+        category = request.form.get("category", "").strip()
+        saleprice = request.form.get("price", "0")
+        quantity = request.form.get("stock", "0")
+        description = request.form.get("description", "").strip()
 
         if not product_name or not category:
-
-            flash(
-                "Product name and category are required",
-                "danger"
-            )
-
+            flash("Product name and category are required", "danger")
             return redirect(
-                url_for(
-                    "admin_edit_product",
-                    product_id=product_id
-                )
+                url_for("admin_edit_product", product_id=product_id)
             )
 
         try:
 
             saleprice = Decimal(saleprice)
-
             quantity = int(quantity)
 
             if saleprice < 0 or quantity < 0:
@@ -1311,16 +1200,9 @@ def admin_edit_product(product_id):
 
         except Exception:
 
-            flash(
-                "Enter valid price and stock",
-                "danger"
-            )
-
+            flash("Enter valid price and stock", "danger")
             return redirect(
-                url_for(
-                    "admin_edit_product",
-                    product_id=product_id
-                )
+                url_for("admin_edit_product", product_id=product_id)
             )
 
         product_data = (
@@ -1337,18 +1219,10 @@ def admin_edit_product(product_id):
         )
 
         if status:
-
-            flash(
-                message,
-                "success"
-            )
-
+            flash(message, "success")
             return redirect(url_for("admin_products"))
 
-        flash(
-            message,
-            "danger"
-        )
+        flash(message, "danger")
 
     category_status, categories = AdminQueries.getAllCategories()
 
@@ -1366,16 +1240,11 @@ def admin_edit_product(product_id):
 # ADMIN DELETE PRODUCT
 # ======================================================
 
-@app.route(
-    "/admin/delete-product/<int:product_id>",
-    methods=["POST"]
-)
+@app.route("/admin/delete-product/<int:product_id>", methods=["POST"])
 @admin_required
 def admin_delete_product(product_id):
 
-    status, message = AdminQueries.deleteProduct(
-        product_id
-    )
+    status, message = AdminQueries.deleteProduct(product_id)
 
     if status:
         flash(message, "success")
@@ -1408,33 +1277,18 @@ def admin_categories():
 # ADMIN ADD CATEGORY
 # ======================================================
 
-@app.route(
-    "/admin/add-category",
-    methods=["POST"]
-)
+@app.route("/admin/add-category", methods=["POST"])
 @admin_required
 def admin_add_category():
 
-    category = request.form.get(
-        "category",
-        ""
-    ).strip()
-
-    new_category = request.form.get(
-        "new_category",
-        ""
-    ).strip()
+    category = request.form.get("category", "").strip()
+    new_category = request.form.get("new_category", "").strip()
 
     if new_category:
         category = new_category
 
     if not category:
-
-        flash(
-            "Enter category name",
-            "danger"
-        )
-
+        flash("Enter category name", "danger")
         return redirect(url_for("admin_categories"))
 
     flash(
@@ -1449,17 +1303,11 @@ def admin_add_category():
 # ADMIN EDIT CATEGORY
 # ======================================================
 
-@app.route(
-    "/admin/edit-category/<string:category_name>",
-    methods=["POST"]
-)
+@app.route("/admin/edit-category/<string:category_name>", methods=["POST"])
 @admin_required
 def admin_edit_category(category_name):
 
-    flash(
-        "Edit the category through the product form",
-        "info"
-    )
+    flash("Edit the category through the product form", "info")
 
     return redirect(url_for("admin_categories"))
 
@@ -1468,10 +1316,7 @@ def admin_edit_category(category_name):
 # ADMIN DELETE CATEGORY
 # ======================================================
 
-@app.route(
-    "/admin/delete-category/<string:category_name>",
-    methods=["POST"]
-)
+@app.route("/admin/delete-category/<string:category_name>", methods=["POST"])
 @admin_required
 def admin_delete_category(category_name):
 
@@ -1491,15 +1336,8 @@ def admin_delete_category(category_name):
 @admin_required
 def admin_orders():
 
-    search = request.args.get(
-        "search",
-        ""
-    ).strip()
-
-    status_filter = request.args.get(
-        "status",
-        ""
-    ).strip()
+    search = request.args.get("search", "").strip()
+    status_filter = request.args.get("status", "").strip()
 
     status, orders_list = AdminQueries.getOrders(
         search=search,
@@ -1542,17 +1380,11 @@ def admin_order_details(order_id):
 # ADMIN UPDATE ORDER STATUS
 # ======================================================
 
-@app.route(
-    "/admin/orders/update-status/<int:order_id>",
-    methods=["POST"]
-)
+@app.route("/admin/orders/update-status/<int:order_id>", methods=["POST"])
 @admin_required
 def admin_update_order_status(order_id):
 
-    order_status = request.form.get(
-        "status",
-        ""
-    ).strip().lower()
+    order_status = request.form.get("status", "").strip().lower()
 
     status, message = AdminQueries.updateOrderStatus(
         order_id,
@@ -1582,12 +1414,13 @@ def forbidden(error):
 
 
 @app.errorhandler(404)
-def page_not_found(e):
+def page_not_found(error):
     return render_template("404.html"), 404
 
 
 @app.errorhandler(500)
 def internal_server_error(error):
+    logging.exception("Internal Server Error")
     return "Internal Server Error", 500
 
 

@@ -1,5 +1,6 @@
 
 from database.connection import DatabaseConnection
+from psycopg2.extras import RealDictCursor
 
 
 class AuthQueries:
@@ -12,7 +13,7 @@ class AuthQueries:
 
         try:
             db_config = DatabaseConnection()
-            cursor = db_config.cursor(dictionary=True)
+            cursor = db_config.cursor(cursor_factory=RealDictCursor)
 
             query = """
                 SELECT * FROM users

@@ -1,0 +1,1222 @@
+[2026-11-17 14:16:37,567] - INFO: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+[2026-11-17 14:16:37,567] - INFO: Press CTRL+C to quit
+[2026-11-17 14:16:37,574] - INFO:  * Restarting with stat
+[2026-11-17 14:16:39,817] - WARNING:  * Debugger is active!
+[2026-11-17 14:16:39,855] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-17 15:07:16,560] - INFO: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+[2026-11-17 15:07:16,562] - INFO: Press CTRL+C to quit
+[2026-11-17 15:07:16,563] - INFO:  * Restarting with stat
+[2026-11-17 15:07:17,186] - WARNING:  * Debugger is active!
+[2026-11-17 15:07:17,190] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-17 15:07:38,851] - INFO: 127.0.0.1 - - [17/Nov/2026 15:07:38] "GET / HTTP/1.1" 200 -
+[2026-11-17 15:07:38,970] - INFO: 127.0.0.1 - - [17/Nov/2026 15:07:38] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 15:07:41,660] - INFO: 127.0.0.1 - - [17/Nov/2026 15:07:41] "GET /favicon.ico HTTP/1.1" 404 -
+[2026-11-17 16:11:46,477] - INFO: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+[2026-11-17 16:11:46,477] - INFO: Press CTRL+C to quit
+[2026-11-17 16:11:46,479] - INFO:  * Restarting with stat
+[2026-11-17 16:11:46,938] - WARNING:  * Debugger is active!
+[2026-11-17 16:11:46,947] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-17 16:12:07,641] - INFO: 127.0.0.1 - - [17/Nov/2026 16:12:07] "GET / HTTP/1.1" 200 -
+[2026-11-17 16:12:07,769] - INFO: 127.0.0.1 - - [17/Nov/2026 16:12:07] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 16:12:14,394] - INFO: 127.0.0.1 - - [17/Nov/2026 16:12:14] "GET /products HTTP/1.1" 200 -
+[2026-11-17 16:12:14,409] - INFO: 127.0.0.1 - - [17/Nov/2026 16:12:14] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 16:12:14,412] - INFO: 127.0.0.1 - - [17/Nov/2026 16:12:14] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 16:12:20,203] - INFO: 127.0.0.1 - - [17/Nov/2026 16:12:20] "GET / HTTP/1.1" 200 -
+[2026-11-17 16:12:20,212] - INFO: 127.0.0.1 - - [17/Nov/2026 16:12:20] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 16:12:22,175] - INFO: 127.0.0.1 - - [17/Nov/2026 16:12:22] "GET /admin/dashboard HTTP/1.1" 302 -
+[2026-11-17 16:12:22,180] - INFO: User in login page
+[2026-11-17 16:12:22,189] - INFO: 127.0.0.1 - - [17/Nov/2026 16:12:22] "GET /login HTTP/1.1" 200 -
+[2026-11-17 16:12:22,198] - INFO: 127.0.0.1 - - [17/Nov/2026 16:12:22] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 16:12:38,903] - WARNING: Email Not Exists
+[2026-11-17 16:12:38,904] - INFO: 127.0.0.1 - - [17/Nov/2026 16:12:38] "POST /login HTTP/1.1" 302 -
+[2026-11-17 16:12:38,908] - INFO: User in login page
+[2026-11-17 16:12:38,910] - INFO: 127.0.0.1 - - [17/Nov/2026 16:12:38] "GET /login HTTP/1.1" 200 -
+[2026-11-17 16:12:38,919] - INFO: 127.0.0.1 - - [17/Nov/2026 16:12:38] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 16:12:51,941] - WARNING: Email Not Exists
+[2026-11-17 16:12:51,942] - INFO: 127.0.0.1 - - [17/Nov/2026 16:12:51] "POST /login HTTP/1.1" 302 -
+[2026-11-17 16:12:51,947] - INFO: User in login page
+[2026-11-17 16:12:51,948] - INFO: 127.0.0.1 - - [17/Nov/2026 16:12:51] "GET /login HTTP/1.1" 200 -
+[2026-11-17 16:12:51,959] - INFO: 127.0.0.1 - - [17/Nov/2026 16:12:51] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 16:13:04,340] - WARNING: Email Not Exists
+[2026-11-17 16:13:04,341] - INFO: 127.0.0.1 - - [17/Nov/2026 16:13:04] "POST /login HTTP/1.1" 302 -
+[2026-11-17 16:13:04,348] - INFO: User in login page
+[2026-11-17 16:13:04,349] - INFO: 127.0.0.1 - - [17/Nov/2026 16:13:04] "GET /login HTTP/1.1" 200 -
+[2026-11-17 16:13:04,362] - INFO: 127.0.0.1 - - [17/Nov/2026 16:13:04] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 16:13:12,496] - WARNING: Email Not Exists
+[2026-11-17 16:13:12,497] - INFO: 127.0.0.1 - - [17/Nov/2026 16:13:12] "POST /login HTTP/1.1" 302 -
+[2026-11-17 16:13:12,501] - INFO: User in login page
+[2026-11-17 16:13:12,502] - INFO: 127.0.0.1 - - [17/Nov/2026 16:13:12] "GET /login HTTP/1.1" 200 -
+[2026-11-17 16:13:12,513] - INFO: 127.0.0.1 - - [17/Nov/2026 16:13:12] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 16:13:28,739] - WARNING: Email Not Exists
+[2026-11-17 16:13:28,740] - INFO: 127.0.0.1 - - [17/Nov/2026 16:13:28] "POST /login HTTP/1.1" 302 -
+[2026-11-17 16:13:28,747] - INFO: User in login page
+[2026-11-17 16:13:28,748] - INFO: 127.0.0.1 - - [17/Nov/2026 16:13:28] "GET /login HTTP/1.1" 200 -
+[2026-11-17 16:13:28,758] - INFO: 127.0.0.1 - - [17/Nov/2026 16:13:28] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 16:13:37,766] - INFO: 127.0.0.1 - - [17/Nov/2026 16:13:37] "GET / HTTP/1.1" 200 -
+[2026-11-17 16:13:37,778] - INFO: 127.0.0.1 - - [17/Nov/2026 16:13:37] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 16:13:42,324] - INFO: 127.0.0.1 - - [17/Nov/2026 16:13:42] "GET /admin/dashboard HTTP/1.1" 302 -
+[2026-11-17 16:13:42,330] - INFO: User in login page
+[2026-11-17 16:13:42,332] - INFO: 127.0.0.1 - - [17/Nov/2026 16:13:42] "GET /login HTTP/1.1" 200 -
+[2026-11-17 16:13:42,351] - INFO: 127.0.0.1 - - [17/Nov/2026 16:13:42] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 19:18:27,033] - INFO: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+[2026-11-17 19:18:27,034] - INFO: Press CTRL+C to quit
+[2026-11-17 19:18:27,037] - INFO:  * Restarting with stat
+[2026-11-17 19:18:28,031] - WARNING:  * Debugger is active!
+[2026-11-17 19:18:28,042] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-17 19:18:54,560] - INFO: 127.0.0.1 - - [17/Nov/2026 19:18:54] "GET / HTTP/1.1" 200 -
+[2026-11-17 19:18:54,817] - INFO: 127.0.0.1 - - [17/Nov/2026 19:18:54] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 19:18:54,901] - INFO: 127.0.0.1 - - [17/Nov/2026 19:18:54] "GET /favicon.ico HTTP/1.1" 404 -
+[2026-11-17 19:19:02,504] - INFO: User in login page
+[2026-11-17 19:19:02,536] - INFO: 127.0.0.1 - - [17/Nov/2026 19:19:02] "GET /login HTTP/1.1" 200 -
+[2026-11-17 19:19:02,549] - INFO: 127.0.0.1 - - [17/Nov/2026 19:19:02] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 19:19:12,177] - WARNING: Email Not Exists
+[2026-11-17 19:19:12,180] - INFO: 127.0.0.1 - - [17/Nov/2026 19:19:12] "POST /login HTTP/1.1" 302 -
+[2026-11-17 19:19:12,188] - INFO: User in login page
+[2026-11-17 19:19:12,191] - INFO: 127.0.0.1 - - [17/Nov/2026 19:19:12] "GET /login HTTP/1.1" 200 -
+[2026-11-17 19:19:12,210] - INFO: 127.0.0.1 - - [17/Nov/2026 19:19:12] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 19:19:50,293] - WARNING: Email Not Exists
+[2026-11-17 19:19:50,297] - INFO: 127.0.0.1 - - [17/Nov/2026 19:19:50] "POST /login HTTP/1.1" 302 -
+[2026-11-17 19:19:50,305] - INFO: User in login page
+[2026-11-17 19:19:50,309] - INFO: 127.0.0.1 - - [17/Nov/2026 19:19:50] "GET /login HTTP/1.1" 200 -
+[2026-11-17 19:19:50,328] - INFO: 127.0.0.1 - - [17/Nov/2026 19:19:50] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 19:20:09,060] - WARNING: Email Not Exists
+[2026-11-17 19:20:09,061] - INFO: 127.0.0.1 - - [17/Nov/2026 19:20:09] "POST /login HTTP/1.1" 302 -
+[2026-11-17 19:20:09,068] - INFO: User in login page
+[2026-11-17 19:20:09,070] - INFO: 127.0.0.1 - - [17/Nov/2026 19:20:09] "GET /login HTTP/1.1" 200 -
+[2026-11-17 19:20:09,092] - INFO: 127.0.0.1 - - [17/Nov/2026 19:20:09] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 19:34:11,853] - INFO: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+[2026-11-17 19:34:11,854] - INFO: Press CTRL+C to quit
+[2026-11-17 19:34:11,858] - INFO:  * Restarting with stat
+[2026-11-17 19:34:12,727] - WARNING:  * Debugger is active!
+[2026-11-17 19:34:12,731] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-17 19:34:32,114] - INFO: 127.0.0.1 - - [17/Nov/2026 19:34:32] "GET / HTTP/1.1" 200 -
+[2026-11-17 19:34:32,356] - INFO: 127.0.0.1 - - [17/Nov/2026 19:34:32] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 19:34:34,522] - INFO: 127.0.0.1 - - [17/Nov/2026 19:34:34] "GET /admin/dashboard HTTP/1.1" 302 -
+[2026-11-17 19:34:34,531] - INFO: User in login page
+[2026-11-17 19:34:34,546] - INFO: 127.0.0.1 - - [17/Nov/2026 19:34:34] "GET /login HTTP/1.1" 200 -
+[2026-11-17 19:34:34,563] - INFO: 127.0.0.1 - - [17/Nov/2026 19:34:34] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 19:34:52,958] - WARNING: Password incorrect
+[2026-11-17 19:34:52,959] - INFO: 127.0.0.1 - - [17/Nov/2026 19:34:52] "POST /login HTTP/1.1" 302 -
+[2026-11-17 19:34:52,966] - INFO: User in login page
+[2026-11-17 19:34:52,968] - INFO: 127.0.0.1 - - [17/Nov/2026 19:34:52] "GET /login HTTP/1.1" 200 -
+[2026-11-17 19:34:52,987] - INFO: 127.0.0.1 - - [17/Nov/2026 19:34:52] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 19:35:07,379] - INFO: Moulya entering products page
+[2026-11-17 19:35:07,381] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:07] "POST /login HTTP/1.1" 302 -
+[2026-11-17 19:35:09,474] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:09] "GET /products HTTP/1.1" 200 -
+[2026-11-17 19:35:09,501] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:09] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 19:35:09,523] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:09] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 19:35:14,660] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:14] "GET / HTTP/1.1" 200 -
+[2026-11-17 19:35:14,679] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:14] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 19:35:18,757] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:18] "GET /products HTTP/1.1" 200 -
+[2026-11-17 19:35:18,771] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:18] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 19:35:18,777] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:18] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 19:35:23,429] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:23] "GET /orders HTTP/1.1" 200 -
+[2026-11-17 19:35:23,450] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:23] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 19:35:23,453] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:23] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 19:35:27,483] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:27] "GET /profile HTTP/1.1" 500 -
+[2026-11-17 19:35:27,505] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:27] "GET /profile?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+[2026-11-17 19:35:27,544] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:27] "GET /profile?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+[2026-11-17 19:35:27,627] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:27] "GET /profile?__debugger__=yes&cmd=resource&f=console.png&s=wQM5Mwdm94pnRkSOIK0p HTTP/1.1" 200 -
+[2026-11-17 19:35:38,583] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:38] "GET /products HTTP/1.1" 200 -
+[2026-11-17 19:35:38,603] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:38] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 19:35:38,604] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:38] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 19:35:48,950] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:48] "GET /cart HTTP/1.1" 200 -
+[2026-11-17 19:35:48,963] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:48] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 19:35:48,970] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:48] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 19:35:57,847] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:57] "GET /admin/dashboard HTTP/1.1" 403 -
+[2026-11-17 19:35:57,861] - INFO: 127.0.0.1 - - [17/Nov/2026 19:35:57] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 19:36:01,521] - INFO: 127.0.0.1 - - [17/Nov/2026 19:36:01] "GET / HTTP/1.1" 200 -
+[2026-11-17 19:36:01,540] - INFO: 127.0.0.1 - - [17/Nov/2026 19:36:01] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 19:37:59,234] - INFO: 127.0.0.1 - - [17/Nov/2026 19:37:59] "GET /profile HTTP/1.1" 500 -
+[2026-11-17 19:37:59,249] - INFO: 127.0.0.1 - - [17/Nov/2026 19:37:59] "GET /profile?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+[2026-11-17 19:37:59,252] - INFO: 127.0.0.1 - - [17/Nov/2026 19:37:59] "GET /profile?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+[2026-11-17 19:37:59,295] - INFO: 127.0.0.1 - - [17/Nov/2026 19:37:59] "GET /profile?__debugger__=yes&cmd=resource&f=console.png&s=wQM5Mwdm94pnRkSOIK0p HTTP/1.1" 304 -
+[2026-11-17 19:48:40,374] - INFO: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+[2026-11-17 19:59:46,592] - INFO:  * Detected change in 'C:\\Users\\moulya_meruva\\OneDrive\\Desktop\\Ecommerce-website\\app.py', reloading
+[2026-11-17 19:59:46,686] - INFO:  * Restarting with stat
+[2026-11-17 20:00:44,609] - INFO: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+[2026-11-17 20:00:44,610] - INFO: Press CTRL+C to quit
+[2026-11-17 20:00:44,612] - INFO:  * Restarting with stat
+[2026-11-17 20:00:45,517] - WARNING:  * Debugger is active!
+[2026-11-17 20:00:45,521] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-17 20:01:05,504] - INFO: 127.0.0.1 - - [17/Nov/2026 20:01:05] "GET / HTTP/1.1" 200 -
+[2026-11-17 20:01:05,739] - INFO: 127.0.0.1 - - [17/Nov/2026 20:01:05] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 20:01:33,983] - INFO: 127.0.0.1 - - [17/Nov/2026 20:01:33] "GET /logout HTTP/1.1" 302 -
+[2026-11-17 20:01:35,300] - INFO: 127.0.0.1 - - [17/Nov/2026 20:01:35] "GET / HTTP/1.1" 200 -
+[2026-11-17 20:01:35,330] - INFO: 127.0.0.1 - - [17/Nov/2026 20:01:35] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 20:01:37,614] - INFO: User in login page
+[2026-11-17 20:01:37,629] - INFO: 127.0.0.1 - - [17/Nov/2026 20:01:37] "GET /login HTTP/1.1" 200 -
+[2026-11-17 20:01:37,644] - INFO: 127.0.0.1 - - [17/Nov/2026 20:01:37] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 20:01:54,133] - INFO: Moulya Meruva entering admin dashboard
+[2026-11-17 20:01:54,136] - INFO: 127.0.0.1 - - [17/Nov/2026 20:01:54] "POST /login HTTP/1.1" 302 -
+[2026-11-17 20:01:57,995] - INFO: Moulya Meruva entering admin dashboard
+[2026-11-17 20:01:57,997] - INFO: 127.0.0.1 - - [17/Nov/2026 20:01:57] "POST /login HTTP/1.1" 302 -
+[2026-11-17 20:02:01,943] - INFO: 127.0.0.1 - - [17/Nov/2026 20:02:01] "GET /admin/dashboard HTTP/1.1" 200 -
+[2026-11-17 20:02:04,432] - INFO: 127.0.0.1 - - [17/Nov/2026 20:02:04] "GET /admin/dashboard HTTP/1.1" 200 -
+[2026-11-17 20:02:04,489] - INFO: 127.0.0.1 - - [17/Nov/2026 20:02:04] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 20:02:12,939] - INFO: 127.0.0.1 - - [17/Nov/2026 20:02:12] "GET /admin/products HTTP/1.1" 200 -
+[2026-11-17 20:02:12,954] - INFO: 127.0.0.1 - - [17/Nov/2026 20:02:12] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 20:02:14,059] - INFO: 127.0.0.1 - - [17/Nov/2026 20:02:14] "GET /admin/dashboard HTTP/1.1" 200 -
+[2026-11-17 20:02:18,970] - INFO: 127.0.0.1 - - [17/Nov/2026 20:02:18] "GET /admin/orders HTTP/1.1" 200 -
+[2026-11-17 20:02:18,988] - INFO: 127.0.0.1 - - [17/Nov/2026 20:02:18] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 20:02:22,425] - INFO: 127.0.0.1 - - [17/Nov/2026 20:02:22] "GET /admin/users HTTP/1.1" 200 -
+[2026-11-17 20:02:22,440] - INFO: 127.0.0.1 - - [17/Nov/2026 20:02:22] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 20:02:34,413] - INFO: 127.0.0.1 - - [17/Nov/2026 20:02:34] "GET / HTTP/1.1" 200 -
+[2026-11-17 20:02:34,432] - INFO: 127.0.0.1 - - [17/Nov/2026 20:02:34] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 20:02:37,399] - INFO: 127.0.0.1 - - [17/Nov/2026 20:02:37] "GET /logout HTTP/1.1" 302 -
+[2026-11-17 20:02:38,990] - INFO: 127.0.0.1 - - [17/Nov/2026 20:02:38] "GET / HTTP/1.1" 200 -
+[2026-11-17 20:02:39,010] - INFO: 127.0.0.1 - - [17/Nov/2026 20:02:39] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 20:02:40,606] - INFO: User in login page
+[2026-11-17 20:02:40,611] - INFO: 127.0.0.1 - - [17/Nov/2026 20:02:40] "GET /login HTTP/1.1" 200 -
+[2026-11-17 20:02:40,625] - INFO: 127.0.0.1 - - [17/Nov/2026 20:02:40] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 20:02:55,458] - INFO: Moulya entering products page
+[2026-11-17 20:02:55,460] - INFO: 127.0.0.1 - - [17/Nov/2026 20:02:55] "POST /login HTTP/1.1" 302 -
+[2026-11-17 20:03:01,210] - INFO: 127.0.0.1 - - [17/Nov/2026 20:03:01] "GET /products HTTP/1.1" 200 -
+[2026-11-17 20:03:01,238] - INFO: 127.0.0.1 - - [17/Nov/2026 20:03:01] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 20:03:01,240] - INFO: 127.0.0.1 - - [17/Nov/2026 20:03:01] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 20:03:08,238] - INFO: 127.0.0.1 - - [17/Nov/2026 20:03:08] "GET / HTTP/1.1" 200 -
+[2026-11-17 20:03:11,416] - INFO: 127.0.0.1 - - [17/Nov/2026 20:03:11] "GET /products HTTP/1.1" 200 -
+[2026-11-17 20:03:15,409] - INFO: 127.0.0.1 - - [17/Nov/2026 20:03:15] "GET /products HTTP/1.1" 200 -
+[2026-11-17 20:03:15,428] - INFO: 127.0.0.1 - - [17/Nov/2026 20:03:15] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 20:03:15,431] - INFO: 127.0.0.1 - - [17/Nov/2026 20:03:15] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 20:03:30,521] - INFO: 127.0.0.1 - - [17/Nov/2026 20:03:30] "GET /products HTTP/1.1" 200 -
+[2026-11-17 20:03:30,538] - INFO: 127.0.0.1 - - [17/Nov/2026 20:03:30] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 20:03:30,545] - INFO: 127.0.0.1 - - [17/Nov/2026 20:03:30] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 20:03:34,863] - INFO: 127.0.0.1 - - [17/Nov/2026 20:03:34] "GET /orders HTTP/1.1" 200 -
+[2026-11-17 20:03:34,879] - INFO: 127.0.0.1 - - [17/Nov/2026 20:03:34] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 20:03:34,886] - INFO: 127.0.0.1 - - [17/Nov/2026 20:03:34] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 20:03:38,975] - INFO: 127.0.0.1 - - [17/Nov/2026 20:03:38] "GET /profile HTTP/1.1" 200 -
+[2026-11-17 20:03:38,992] - INFO: 127.0.0.1 - - [17/Nov/2026 20:03:38] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 20:03:38,994] - INFO: 127.0.0.1 - - [17/Nov/2026 20:03:38] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 20:03:45,189] - INFO: 127.0.0.1 - - [17/Nov/2026 20:03:45] "GET /products HTTP/1.1" 200 -
+[2026-11-17 20:03:45,203] - INFO: 127.0.0.1 - - [17/Nov/2026 20:03:45] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 20:03:45,209] - INFO: 127.0.0.1 - - [17/Nov/2026 20:03:45] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 20:05:06,536] - INFO: 127.0.0.1 - - [17/Nov/2026 20:05:06] "GET /profile HTTP/1.1" 200 -
+[2026-11-17 20:05:06,556] - INFO: 127.0.0.1 - - [17/Nov/2026 20:05:06] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 20:05:06,560] - INFO: 127.0.0.1 - - [17/Nov/2026 20:05:06] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 20:05:44,569] - INFO: 127.0.0.1 - - [17/Nov/2026 20:05:44] "POST /profile/update HTTP/1.1" 302 -
+[2026-11-17 20:05:46,969] - INFO: 127.0.0.1 - - [17/Nov/2026 20:05:46] "GET /profile HTTP/1.1" 200 -
+[2026-11-17 20:05:47,008] - INFO: 127.0.0.1 - - [17/Nov/2026 20:05:47] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 20:05:47,009] - INFO: 127.0.0.1 - - [17/Nov/2026 20:05:47] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 20:06:54,637] - INFO: 127.0.0.1 - - [17/Nov/2026 20:06:54] "GET /cart HTTP/1.1" 200 -
+[2026-11-17 20:06:54,657] - INFO: 127.0.0.1 - - [17/Nov/2026 20:06:54] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 20:06:54,659] - INFO: 127.0.0.1 - - [17/Nov/2026 20:06:54] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 20:07:00,033] - INFO: 127.0.0.1 - - [17/Nov/2026 20:07:00] "GET /products HTTP/1.1" 200 -
+[2026-11-17 20:07:00,046] - INFO: 127.0.0.1 - - [17/Nov/2026 20:07:00] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 20:07:00,049] - INFO: 127.0.0.1 - - [17/Nov/2026 20:07:00] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 21:36:56,005] - INFO: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+[2026-11-17 21:36:56,006] - INFO: Press CTRL+C to quit
+[2026-11-17 21:36:56,009] - INFO:  * Restarting with stat
+[2026-11-17 21:36:57,058] - WARNING:  * Debugger is active!
+[2026-11-17 21:36:57,064] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-17 21:37:20,494] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:20] "GET / HTTP/1.1" 200 -
+[2026-11-17 21:37:20,753] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:20] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 21:37:25,572] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:25] "GET /products HTTP/1.1" 200 -
+[2026-11-17 21:37:25,590] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:25] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 21:37:25,624] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:25] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 21:37:25,629] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:25] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 21:37:25,632] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:25] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 21:37:25,634] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:25] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 21:37:25,639] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:25] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 21:37:25,640] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:25] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 21:37:25,661] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:25] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 21:37:25,665] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:25] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-17 21:37:37,120] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:37] "GET /orders HTTP/1.1" 200 -
+[2026-11-17 21:37:37,142] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:37] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 21:37:37,145] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:37] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 21:37:41,385] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:41] "GET / HTTP/1.1" 200 -
+[2026-11-17 21:37:41,403] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:41] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 21:37:45,247] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:45] "GET /profile HTTP/1.1" 200 -
+[2026-11-17 21:37:45,263] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:45] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 21:37:45,266] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:45] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 21:37:54,555] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:54] "GET /products HTTP/1.1" 200 -
+[2026-11-17 21:37:54,577] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:54] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 21:37:54,588] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:54] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 21:37:54,592] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:54] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 21:37:54,593] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:54] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 21:37:54,603] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:54] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 21:37:54,614] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:54] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 21:37:54,614] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:54] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 21:37:54,621] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:54] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 21:37:54,627] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:54] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-17 21:37:59,921] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:59] "GET /products/1/details HTTP/1.1" 200 -
+[2026-11-17 21:37:59,941] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:59] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 21:37:59,942] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:59] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 21:37:59,945] - INFO: 127.0.0.1 - - [17/Nov/2026 21:37:59] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-17 21:38:03,759] - INFO: 127.0.0.1 - - [17/Nov/2026 21:38:03] "POST /cart/add/1 HTTP/1.1" 302 -
+[2026-11-17 21:38:04,880] - INFO: 127.0.0.1 - - [17/Nov/2026 21:38:04] "GET /products/1/details HTTP/1.1" 200 -
+[2026-11-17 21:38:04,917] - INFO: 127.0.0.1 - - [17/Nov/2026 21:38:04] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 21:38:04,919] - INFO: 127.0.0.1 - - [17/Nov/2026 21:38:04] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 21:38:04,921] - INFO: 127.0.0.1 - - [17/Nov/2026 21:38:04] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-17 21:38:09,685] - INFO: 127.0.0.1 - - [17/Nov/2026 21:38:09] "GET /cart HTTP/1.1" 200 -
+[2026-11-17 21:38:09,699] - INFO: 127.0.0.1 - - [17/Nov/2026 21:38:09] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 21:38:09,705] - INFO: 127.0.0.1 - - [17/Nov/2026 21:38:09] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 21:38:09,708] - INFO: 127.0.0.1 - - [17/Nov/2026 21:38:09] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-17 21:38:14,536] - INFO: 127.0.0.1 - - [17/Nov/2026 21:38:14] "GET /checkout HTTP/1.1" 200 -
+[2026-11-17 21:38:14,555] - INFO: 127.0.0.1 - - [17/Nov/2026 21:38:14] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 21:38:14,560] - INFO: 127.0.0.1 - - [17/Nov/2026 21:38:14] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 21:39:09,274] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:09] "POST /checkout HTTP/1.1" 302 -
+[2026-11-17 21:39:11,356] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:11] "GET /payment/success/1 HTTP/1.1" 200 -
+[2026-11-17 21:39:11,382] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:11] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 21:39:11,383] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:11] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 21:39:17,169] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:17] "GET /orders/1 HTTP/1.1" 200 -
+[2026-11-17 21:39:17,181] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:17] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 21:39:17,184] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:17] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 21:39:26,701] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:26] "GET /invoice/1 HTTP/1.1" 200 -
+[2026-11-17 21:39:26,716] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:26] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 21:39:26,718] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:26] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 21:39:33,533] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:33] "GET /orders HTTP/1.1" 500 -
+[2026-11-17 21:39:33,583] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:33] "GET /orders?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+[2026-11-17 21:39:33,652] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:33] "GET /orders?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+[2026-11-17 21:39:33,739] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:33] "GET /orders?__debugger__=yes&cmd=resource&f=console.png&s=XEeGhdYkhkUZksgLB26T HTTP/1.1" 200 -
+[2026-11-17 21:39:33,758] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:33] "GET /orders?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+[2026-11-17 21:39:51,647] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:51] "GET /products HTTP/1.1" 200 -
+[2026-11-17 21:39:51,668] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:51] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 21:39:51,678] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:51] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 21:39:51,680] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:51] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 21:39:51,686] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:51] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 21:39:51,695] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:51] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 21:39:51,698] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:51] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 21:39:51,710] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:51] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 21:39:51,712] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:51] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 21:39:51,714] - INFO: 127.0.0.1 - - [17/Nov/2026 21:39:51] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-17 21:40:04,516] - INFO: 127.0.0.1 - - [17/Nov/2026 21:40:04] "GET /products/7/details HTTP/1.1" 200 -
+[2026-11-17 21:40:04,534] - INFO: 127.0.0.1 - - [17/Nov/2026 21:40:04] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 21:40:04,542] - INFO: 127.0.0.1 - - [17/Nov/2026 21:40:04] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 21:40:04,549] - INFO: 127.0.0.1 - - [17/Nov/2026 21:40:04] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 21:50:29,010] - INFO: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+[2026-11-17 21:50:29,010] - INFO: Press CTRL+C to quit
+[2026-11-17 21:50:29,013] - INFO:  * Restarting with stat
+[2026-11-17 21:50:30,134] - WARNING:  * Debugger is active!
+[2026-11-17 21:50:30,141] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-17 21:51:25,283] - INFO: 127.0.0.1 - - [17/Nov/2026 21:51:25] "GET / HTTP/1.1" 200 -
+[2026-11-17 21:51:25,532] - INFO: 127.0.0.1 - - [17/Nov/2026 21:51:25] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 21:52:02,657] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:02] "GET /products HTTP/1.1" 200 -
+[2026-11-17 21:52:02,673] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:02] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 21:52:02,676] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:02] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 21:52:02,678] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:02] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 21:52:02,684] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:02] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 21:52:02,685] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:02] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 21:52:02,692] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:02] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 21:52:02,698] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:02] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 21:52:02,699] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:02] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 21:52:02,703] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:02] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-17 21:52:06,292] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:06] "GET /orders HTTP/1.1" 500 -
+[2026-11-17 21:52:06,303] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:06] "GET /orders?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+[2026-11-17 21:52:06,304] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:06] "GET /orders?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+[2026-11-17 21:52:06,314] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:06] "GET /orders?__debugger__=yes&cmd=resource&f=console.png&s=1Lr0uBx6sjoqqslAfYWn HTTP/1.1" 200 -
+[2026-11-17 21:52:06,366] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:06] "GET /orders?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+[2026-11-17 21:52:11,749] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:11] "GET /orders HTTP/1.1" 500 -
+[2026-11-17 21:52:11,758] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:11] "GET /orders?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+[2026-11-17 21:52:11,760] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:11] "GET /orders?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+[2026-11-17 21:52:11,769] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:11] "GET /orders?__debugger__=yes&cmd=resource&f=console.png&s=1Lr0uBx6sjoqqslAfYWn HTTP/1.1" 304 -
+[2026-11-17 21:52:11,797] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:11] "GET /orders?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+[2026-11-17 21:52:17,158] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:17] "GET /profile HTTP/1.1" 200 -
+[2026-11-17 21:52:17,167] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:17] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 21:52:17,168] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:17] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 21:52:21,673] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:21] "GET /orders HTTP/1.1" 500 -
+[2026-11-17 21:52:21,681] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:21] "GET /orders?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+[2026-11-17 21:52:21,686] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:21] "GET /orders?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+[2026-11-17 21:52:21,718] - INFO: 127.0.0.1 - - [17/Nov/2026 21:52:21] "GET /orders?__debugger__=yes&cmd=resource&f=console.png&s=1Lr0uBx6sjoqqslAfYWn HTTP/1.1" 304 -
+[2026-11-17 22:00:04,700] - INFO:  * Detected change in 'C:\\Users\\moulya_meruva\\OneDrive\\Desktop\\Ecommerce-website\\database\\userDB.py', reloading
+[2026-11-17 22:00:04,985] - INFO:  * Restarting with stat
+[2026-11-17 22:04:01,289] - INFO: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+[2026-11-17 22:04:01,290] - INFO: Press CTRL+C to quit
+[2026-11-17 22:04:01,293] - INFO:  * Restarting with stat
+[2026-11-17 22:04:01,884] - WARNING:  * Debugger is active!
+[2026-11-17 22:04:01,887] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-17 22:04:32,091] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:32] "GET /profile HTTP/1.1" 200 -
+[2026-11-17 22:04:35,422] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:35] "GET /orders HTTP/1.1" 500 -
+[2026-11-17 22:04:35,563] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:35] "GET /orders?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+[2026-11-17 22:04:35,564] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:35] "GET /orders?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+[2026-11-17 22:04:35,602] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:35] "GET /orders?__debugger__=yes&cmd=resource&f=console.png&s=g81NMoKU8aYEI2rZzd43 HTTP/1.1" 200 -
+[2026-11-17 22:04:42,141] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:42] "GET /products HTTP/1.1" 200 -
+[2026-11-17 22:04:42,162] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:42] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:04:42,165] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:42] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:04:42,175] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:42] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 22:04:42,177] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:42] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:04:42,180] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:42] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:04:42,185] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:42] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 22:04:42,191] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:42] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 22:04:42,195] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:42] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 22:04:42,201] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:42] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-17 22:04:47,385] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:47] "GET /cart HTTP/1.1" 200 -
+[2026-11-17 22:04:47,401] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:47] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:04:47,403] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:47] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:04:50,531] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:50] "GET /logout HTTP/1.1" 302 -
+[2026-11-17 22:04:51,629] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:51] "GET / HTTP/1.1" 200 -
+[2026-11-17 22:04:51,650] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:51] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:04:54,759] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:54] "GET /admin/dashboard HTTP/1.1" 302 -
+[2026-11-17 22:04:54,766] - INFO: User in login page
+[2026-11-17 22:04:54,794] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:54] "GET /login HTTP/1.1" 200 -
+[2026-11-17 22:04:54,804] - INFO: 127.0.0.1 - - [17/Nov/2026 22:04:54] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:05:05,837] - INFO: Moulya Meruva entering admin dashboard
+[2026-11-17 22:05:05,838] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:05] "POST /login HTTP/1.1" 302 -
+[2026-11-17 22:05:10,103] - INFO: Moulya Meruva entering admin dashboard
+[2026-11-17 22:05:10,104] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:10] "POST /login HTTP/1.1" 302 -
+[2026-11-17 22:05:10,713] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:10] "GET /admin/dashboard HTTP/1.1" 200 -
+[2026-11-17 22:05:14,046] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:14] "GET /admin/dashboard HTTP/1.1" 200 -
+[2026-11-17 22:05:14,096] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:14] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 22:05:22,474] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:22] "GET /admin/products HTTP/1.1" 200 -
+[2026-11-17 22:05:22,494] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:22] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 22:05:22,495] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:22] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 22:05:22,506] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:22] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:05:22,515] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:22] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 22:05:22,524] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:22] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:05:22,528] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:22] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 22:05:22,530] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:22] "GET /static/images/products/9b606c61ee1c429bb362e09c09db3c2e.png HTTP/1.1" 304 -
+[2026-11-17 22:05:22,536] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:22] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 22:05:40,551] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:40] "GET /admin/products?page=2&search=&category=&status=&stock=&min_price=&max_price= HTTP/1.1" 200 -
+[2026-11-17 22:05:40,567] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:40] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 22:05:40,582] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:40] "GET /static/images/products/af7b2e79cb184300a6a874039f239b9a_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 22:05:40,585] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:40] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-17 22:05:40,604] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:40] "GET /static/images/products/607a5f8ca57e465495b634dce3e6553d_wireless_mouse.jpg HTTP/1.1" 304 -
+[2026-11-17 22:05:46,107] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:46] "GET /admin/products?page=1&search=&category=&status=&stock=&min_price=&max_price= HTTP/1.1" 200 -
+[2026-11-17 22:05:46,125] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:46] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 22:05:46,133] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:46] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 22:05:46,145] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:46] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 22:05:46,146] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:46] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:05:46,152] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:46] "GET /static/images/products/9b606c61ee1c429bb362e09c09db3c2e.png HTTP/1.1" 304 -
+[2026-11-17 22:05:46,161] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:46] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:05:46,168] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:46] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 22:05:46,177] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:46] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 22:05:53,622] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:53] "GET /admin/products?page=2&search=&category=&status=&stock=&min_price=&max_price= HTTP/1.1" 200 -
+[2026-11-17 22:05:53,637] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:53] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 22:05:53,644] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:53] "GET /static/images/products/af7b2e79cb184300a6a874039f239b9a_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 22:05:53,651] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:53] "GET /static/images/products/607a5f8ca57e465495b634dce3e6553d_wireless_mouse.jpg HTTP/1.1" 304 -
+[2026-11-17 22:05:53,658] - INFO: 127.0.0.1 - - [17/Nov/2026 22:05:53] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-17 22:06:01,859] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:01] "GET /admin/products?page=1&search=&category=&status=&stock=&min_price=&max_price= HTTP/1.1" 200 -
+[2026-11-17 22:06:01,878] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:01] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 22:06:01,882] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:01] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 22:06:01,904] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:01] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:06:01,909] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:01] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 22:06:01,915] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:01] "GET /static/images/products/9b606c61ee1c429bb362e09c09db3c2e.png HTTP/1.1" 304 -
+[2026-11-17 22:06:01,925] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:01] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:06:01,929] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:01] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 22:06:01,931] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:01] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 22:06:13,592] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:13] "GET /admin/products HTTP/1.1" 200 -
+[2026-11-17 22:06:13,608] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:13] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 22:06:13,610] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:13] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 22:06:13,625] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:13] "GET /static/images/products/9b606c61ee1c429bb362e09c09db3c2e.png HTTP/1.1" 304 -
+[2026-11-17 22:06:13,625] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:13] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:06:13,626] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:13] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 22:06:13,628] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:13] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:06:13,632] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:13] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 22:06:13,634] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:13] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 22:06:31,451] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:31] "GET /admin/products HTTP/1.1" 200 -
+[2026-11-17 22:06:31,470] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:31] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 22:06:31,477] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:31] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 22:06:31,487] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:31] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:06:31,492] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:31] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 22:06:31,499] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:31] "GET /static/images/products/9b606c61ee1c429bb362e09c09db3c2e.png HTTP/1.1" 304 -
+[2026-11-17 22:06:31,504] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:31] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:06:31,511] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:31] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 22:06:31,511] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:31] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 22:06:37,175] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:37] "GET /admin/orders HTTP/1.1" 200 -
+[2026-11-17 22:06:37,193] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:37] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 22:06:49,989] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:49] "GET /admin/users HTTP/1.1" 200 -
+[2026-11-17 22:06:50,003] - INFO: 127.0.0.1 - - [17/Nov/2026 22:06:50] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 22:07:07,564] - INFO: 127.0.0.1 - - [17/Nov/2026 22:07:07] "GET / HTTP/1.1" 200 -
+[2026-11-17 22:07:07,577] - INFO: 127.0.0.1 - - [17/Nov/2026 22:07:07] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:07:14,398] - INFO: 127.0.0.1 - - [17/Nov/2026 22:07:14] "GET /admin/orders HTTP/1.1" 200 -
+[2026-11-17 22:07:14,413] - INFO: 127.0.0.1 - - [17/Nov/2026 22:07:14] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 22:07:24,488] - INFO: 127.0.0.1 - - [17/Nov/2026 22:07:24] "GET /admin/dashboard HTTP/1.1" 200 -
+[2026-11-17 22:07:24,504] - INFO: 127.0.0.1 - - [17/Nov/2026 22:07:24] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 22:07:30,575] - INFO: 127.0.0.1 - - [17/Nov/2026 22:07:30] "GET /admin/products HTTP/1.1" 200 -
+[2026-11-17 22:07:30,590] - INFO: 127.0.0.1 - - [17/Nov/2026 22:07:30] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 22:07:30,593] - INFO: 127.0.0.1 - - [17/Nov/2026 22:07:30] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 22:07:30,605] - INFO: 127.0.0.1 - - [17/Nov/2026 22:07:30] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:07:30,605] - INFO: 127.0.0.1 - - [17/Nov/2026 22:07:30] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 22:07:30,616] - INFO: 127.0.0.1 - - [17/Nov/2026 22:07:30] "GET /static/images/products/9b606c61ee1c429bb362e09c09db3c2e.png HTTP/1.1" 304 -
+[2026-11-17 22:07:30,623] - INFO: 127.0.0.1 - - [17/Nov/2026 22:07:30] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:07:30,627] - INFO: 127.0.0.1 - - [17/Nov/2026 22:07:30] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 22:07:30,634] - INFO: 127.0.0.1 - - [17/Nov/2026 22:07:30] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 22:08:34,382] - INFO: 127.0.0.1 - - [17/Nov/2026 22:08:34] "GET /admin/users HTTP/1.1" 200 -
+[2026-11-17 22:08:34,393] - INFO: 127.0.0.1 - - [17/Nov/2026 22:08:34] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 22:11:16,483] - INFO:  * Detected change in 'C:\\Users\\moulya_meruva\\OneDrive\\Desktop\\Ecommerce-website\\app.py', reloading
+[2026-11-17 22:11:17,293] - INFO:  * Restarting with stat
+[2026-11-17 22:11:27,704] - WARNING:  * Debugger is active!
+[2026-11-17 22:11:27,729] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-17 22:11:31,105] - INFO:  * Detected change in 'C:\\Users\\moulya_meruva\\OneDrive\\Desktop\\Ecommerce-website\\app.py', reloading
+[2026-11-17 22:11:31,191] - INFO:  * Restarting with stat
+[2026-11-17 22:11:35,242] - WARNING:  * Debugger is active!
+[2026-11-17 22:11:35,264] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-17 22:15:49,140] - INFO: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+[2026-11-17 22:15:49,140] - INFO: Press CTRL+C to quit
+[2026-11-17 22:15:49,148] - INFO:  * Restarting with stat
+[2026-11-17 22:15:50,471] - WARNING:  * Debugger is active!
+[2026-11-17 22:15:50,476] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-17 22:16:10,210] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:10] "GET /admin/users HTTP/1.1" 200 -
+[2026-11-17 22:16:10,323] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:10] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 22:16:14,474] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:14] "GET /admin/orders HTTP/1.1" 200 -
+[2026-11-17 22:16:14,483] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:14] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 22:16:17,383] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:17] "GET /logout HTTP/1.1" 302 -
+[2026-11-17 22:16:18,438] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:18] "GET / HTTP/1.1" 200 -
+[2026-11-17 22:16:18,450] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:18] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:16:20,452] - INFO: User in login page
+[2026-11-17 22:16:20,470] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:20] "GET /login HTTP/1.1" 200 -
+[2026-11-17 22:16:20,484] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:20] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:16:37,288] - INFO: Sricharan Meruva entering products page
+[2026-11-17 22:16:37,290] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:37] "POST /login HTTP/1.1" 302 -
+[2026-11-17 22:16:39,364] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:39] "GET /products HTTP/1.1" 200 -
+[2026-11-17 22:16:39,409] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:39] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 22:16:39,410] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:39] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:16:39,417] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:39] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:16:39,417] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:39] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:16:39,421] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:39] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 22:16:39,425] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:39] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:16:39,441] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:39] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 22:16:39,449] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:39] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 22:16:39,463] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:39] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-17 22:16:44,267] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:44] "GET / HTTP/1.1" 200 -
+[2026-11-17 22:16:44,279] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:44] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:16:50,073] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:50] "GET /products HTTP/1.1" 200 -
+[2026-11-17 22:16:50,090] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:50] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:16:50,095] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:50] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:16:50,099] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:50] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 22:16:50,115] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:50] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:16:50,118] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:50] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 22:16:50,126] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:50] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:16:50,131] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:50] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 22:16:50,141] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:50] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 22:16:50,149] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:50] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-17 22:16:52,929] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:52] "GET /orders HTTP/1.1" 200 -
+[2026-11-17 22:16:52,943] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:52] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:16:52,945] - INFO: 127.0.0.1 - - [17/Nov/2026 22:16:52] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:17:00,626] - INFO: 127.0.0.1 - - [17/Nov/2026 22:17:00] "GET /profile HTTP/1.1" 200 -
+[2026-11-17 22:17:00,643] - INFO: 127.0.0.1 - - [17/Nov/2026 22:17:00] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:17:00,646] - INFO: 127.0.0.1 - - [17/Nov/2026 22:17:00] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:17:06,674] - INFO: 127.0.0.1 - - [17/Nov/2026 22:17:06] "GET /cart HTTP/1.1" 200 -
+[2026-11-17 22:17:06,691] - INFO: 127.0.0.1 - - [17/Nov/2026 22:17:06] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:17:06,696] - INFO: 127.0.0.1 - - [17/Nov/2026 22:17:06] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:17:09,753] - INFO: 127.0.0.1 - - [17/Nov/2026 22:17:09] "GET /profile HTTP/1.1" 200 -
+[2026-11-17 22:17:09,771] - INFO: 127.0.0.1 - - [17/Nov/2026 22:17:09] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:17:09,773] - INFO: 127.0.0.1 - - [17/Nov/2026 22:17:09] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:52:09,071] - INFO: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+[2026-11-17 22:52:09,072] - INFO: Press CTRL+C to quit
+[2026-11-17 22:52:09,075] - INFO:  * Restarting with stat
+[2026-11-17 22:52:10,301] - WARNING:  * Debugger is active!
+[2026-11-17 22:52:10,316] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-17 22:52:57,451] - INFO: 127.0.0.1 - - [17/Nov/2026 22:52:57] "GET / HTTP/1.1" 200 -
+[2026-11-17 22:52:57,582] - INFO: 127.0.0.1 - - [17/Nov/2026 22:52:57] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:53:37,364] - INFO: 127.0.0.1 - - [17/Nov/2026 22:53:37] "GET / HTTP/1.1" 200 -
+[2026-11-17 22:53:37,383] - INFO: 127.0.0.1 - - [17/Nov/2026 22:53:37] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:53:45,269] - INFO: 127.0.0.1 - - [17/Nov/2026 22:53:45] "GET /products HTTP/1.1" 200 -
+[2026-11-17 22:53:45,287] - INFO: 127.0.0.1 - - [17/Nov/2026 22:53:45] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:53:45,291] - INFO: 127.0.0.1 - - [17/Nov/2026 22:53:45] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:53:45,305] - INFO: 127.0.0.1 - - [17/Nov/2026 22:53:45] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 22:53:45,311] - INFO: 127.0.0.1 - - [17/Nov/2026 22:53:45] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:53:45,312] - INFO: 127.0.0.1 - - [17/Nov/2026 22:53:45] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 22:53:45,318] - INFO: 127.0.0.1 - - [17/Nov/2026 22:53:45] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:53:45,325] - INFO: 127.0.0.1 - - [17/Nov/2026 22:53:45] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 22:53:45,326] - INFO: 127.0.0.1 - - [17/Nov/2026 22:53:45] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 22:53:45,329] - INFO: 127.0.0.1 - - [17/Nov/2026 22:53:45] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-17 22:53:59,055] - INFO: 127.0.0.1 - - [17/Nov/2026 22:53:59] "GET /orders HTTP/1.1" 200 -
+[2026-11-17 22:53:59,069] - INFO: 127.0.0.1 - - [17/Nov/2026 22:53:59] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:53:59,070] - INFO: 127.0.0.1 - - [17/Nov/2026 22:53:59] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:54:09,576] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:09] "GET /orders/9 HTTP/1.1" 200 -
+[2026-11-17 22:54:09,590] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:09] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:54:09,592] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:09] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:54:28,838] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:28] "GET /profile HTTP/1.1" 200 -
+[2026-11-17 22:54:28,853] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:28] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:54:28,858] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:28] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:54:32,588] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:32] "GET /logout HTTP/1.1" 302 -
+[2026-11-17 22:54:34,166] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:34] "GET / HTTP/1.1" 200 -
+[2026-11-17 22:54:34,183] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:34] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:54:36,372] - INFO: User in login page
+[2026-11-17 22:54:36,379] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:36] "GET /login HTTP/1.1" 200 -
+[2026-11-17 22:54:36,389] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:36] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:54:55,470] - INFO: Sricharan entering products page
+[2026-11-17 22:54:55,472] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:55] "POST /login HTTP/1.1" 302 -
+[2026-11-17 22:54:57,800] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:57] "GET /products HTTP/1.1" 200 -
+[2026-11-17 22:54:57,828] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:57] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:54:57,833] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:57] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:54:57,834] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:57] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 22:54:57,846] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:57] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:54:57,849] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:57] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 22:54:57,851] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:57] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:54:57,856] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:57] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 22:54:57,865] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:57] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-17 22:54:57,866] - INFO: 127.0.0.1 - - [17/Nov/2026 22:54:57] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 22:55:07,823] - INFO: 127.0.0.1 - - [17/Nov/2026 22:55:07] "GET /orders HTTP/1.1" 200 -
+[2026-11-17 22:55:07,841] - INFO: 127.0.0.1 - - [17/Nov/2026 22:55:07] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:55:07,843] - INFO: 127.0.0.1 - - [17/Nov/2026 22:55:07] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:55:18,092] - INFO: 127.0.0.1 - - [17/Nov/2026 22:55:18] "GET /profile HTTP/1.1" 200 -
+[2026-11-17 22:55:18,107] - INFO: 127.0.0.1 - - [17/Nov/2026 22:55:18] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:55:18,110] - INFO: 127.0.0.1 - - [17/Nov/2026 22:55:18] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:55:28,915] - INFO: 127.0.0.1 - - [17/Nov/2026 22:55:28] "POST /profile/update HTTP/1.1" 302 -
+[2026-11-17 22:55:30,151] - INFO: 127.0.0.1 - - [17/Nov/2026 22:55:30] "POST /profile/update HTTP/1.1" 302 -
+[2026-11-17 22:55:32,182] - INFO: 127.0.0.1 - - [17/Nov/2026 22:55:32] "GET /profile HTTP/1.1" 200 -
+[2026-11-17 22:55:33,924] - INFO: 127.0.0.1 - - [17/Nov/2026 22:55:33] "POST /profile/update HTTP/1.1" 302 -
+[2026-11-17 22:55:35,629] - INFO: 127.0.0.1 - - [17/Nov/2026 22:55:35] "GET /profile HTTP/1.1" 200 -
+[2026-11-17 22:55:35,648] - INFO: 127.0.0.1 - - [17/Nov/2026 22:55:35] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:55:35,650] - INFO: 127.0.0.1 - - [17/Nov/2026 22:55:35] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:56:17,184] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:17] "GET / HTTP/1.1" 200 -
+[2026-11-17 22:56:17,198] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:17] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:56:18,936] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:18] "GET /logout HTTP/1.1" 302 -
+[2026-11-17 22:56:21,243] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:21] "GET / HTTP/1.1" 200 -
+[2026-11-17 22:56:21,264] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:21] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:56:23,559] - INFO: User in login page
+[2026-11-17 22:56:23,560] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:23] "GET /login HTTP/1.1" 200 -
+[2026-11-17 22:56:23,581] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:23] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:56:39,625] - INFO: admin entering products page
+[2026-11-17 22:56:39,626] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:39] "POST /login HTTP/1.1" 302 -
+[2026-11-17 22:56:42,756] - INFO: admin entering products page
+[2026-11-17 22:56:42,757] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:42] "POST /login HTTP/1.1" 302 -
+[2026-11-17 22:56:45,410] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:45] "GET /products HTTP/1.1" 200 -
+[2026-11-17 22:56:45,991] - INFO: admin entering products page
+[2026-11-17 22:56:45,992] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:45] "POST /login HTTP/1.1" 302 -
+[2026-11-17 22:56:48,560] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:48] "GET /products HTTP/1.1" 200 -
+[2026-11-17 22:56:50,123] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:50] "GET /products HTTP/1.1" 200 -
+[2026-11-17 22:56:50,148] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:50] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:56:50,154] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:50] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:56:50,156] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:50] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 22:56:50,157] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:50] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:56:50,165] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:50] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 22:56:50,179] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:50] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:56:50,184] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:50] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 22:56:50,190] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:50] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 22:56:50,192] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:50] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-17 22:56:57,366] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:57] "GET /orders HTTP/1.1" 200 -
+[2026-11-17 22:56:57,380] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:57] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:56:57,380] - INFO: 127.0.0.1 - - [17/Nov/2026 22:56:57] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:57:05,355] - INFO: 127.0.0.1 - - [17/Nov/2026 22:57:05] "GET /orders/10 HTTP/1.1" 200 -
+[2026-11-17 22:57:05,372] - INFO: 127.0.0.1 - - [17/Nov/2026 22:57:05] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:57:05,373] - INFO: 127.0.0.1 - - [17/Nov/2026 22:57:05] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:57:24,788] - INFO: 127.0.0.1 - - [17/Nov/2026 22:57:24] "GET /logout HTTP/1.1" 302 -
+[2026-11-17 22:57:24,793] - INFO: 127.0.0.1 - - [17/Nov/2026 22:57:24] "GET / HTTP/1.1" 200 -
+[2026-11-17 22:57:25,857] - INFO: 127.0.0.1 - - [17/Nov/2026 22:57:25] "GET / HTTP/1.1" 200 -
+[2026-11-17 22:57:25,867] - INFO: 127.0.0.1 - - [17/Nov/2026 22:57:25] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:57:27,311] - INFO: User in login page
+[2026-11-17 22:57:27,311] - INFO: 127.0.0.1 - - [17/Nov/2026 22:57:27] "GET /login HTTP/1.1" 200 -
+[2026-11-17 22:57:27,324] - INFO: 127.0.0.1 - - [17/Nov/2026 22:57:27] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:57:45,246] - INFO: Sricharan Meruva entering products page
+[2026-11-17 22:57:45,247] - INFO: 127.0.0.1 - - [17/Nov/2026 22:57:45] "POST /login HTTP/1.1" 302 -
+[2026-11-17 22:57:55,784] - INFO: Sricharan Meruva entering products page
+[2026-11-17 22:57:55,785] - INFO: 127.0.0.1 - - [17/Nov/2026 22:57:55] "POST /login HTTP/1.1" 302 -
+[2026-11-17 22:57:57,802] - INFO: 127.0.0.1 - - [17/Nov/2026 22:57:57] "GET /products HTTP/1.1" 200 -
+[2026-11-17 22:58:06,374] - INFO: 127.0.0.1 - - [17/Nov/2026 22:58:06] "GET /products HTTP/1.1" 200 -
+[2026-11-17 22:58:06,399] - INFO: 127.0.0.1 - - [17/Nov/2026 22:58:06] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:58:06,400] - INFO: 127.0.0.1 - - [17/Nov/2026 22:58:06] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:58:06,404] - INFO: 127.0.0.1 - - [17/Nov/2026 22:58:06] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 22:58:06,413] - INFO: 127.0.0.1 - - [17/Nov/2026 22:58:06] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:58:06,420] - INFO: 127.0.0.1 - - [17/Nov/2026 22:58:06] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 22:58:06,425] - INFO: 127.0.0.1 - - [17/Nov/2026 22:58:06] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 22:58:06,430] - INFO: 127.0.0.1 - - [17/Nov/2026 22:58:06] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 22:58:06,436] - INFO: 127.0.0.1 - - [17/Nov/2026 22:58:06] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 22:58:06,438] - INFO: 127.0.0.1 - - [17/Nov/2026 22:58:06] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-17 22:58:40,949] - INFO: 127.0.0.1 - - [17/Nov/2026 22:58:40] "GET /orders HTTP/1.1" 200 -
+[2026-11-17 22:58:40,960] - INFO: 127.0.0.1 - - [17/Nov/2026 22:58:40] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:58:40,962] - INFO: 127.0.0.1 - - [17/Nov/2026 22:58:40] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:58:54,150] - INFO: 127.0.0.1 - - [17/Nov/2026 22:58:54] "GET /profile HTTP/1.1" 200 -
+[2026-11-17 22:58:54,168] - INFO: 127.0.0.1 - - [17/Nov/2026 22:58:54] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:58:54,170] - INFO: 127.0.0.1 - - [17/Nov/2026 22:58:54] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 22:58:58,690] - INFO: 127.0.0.1 - - [17/Nov/2026 22:58:58] "GET /logout HTTP/1.1" 302 -
+[2026-11-17 22:59:02,140] - INFO: 127.0.0.1 - - [17/Nov/2026 22:59:02] "GET /logout HTTP/1.1" 302 -
+[2026-11-17 22:59:05,879] - INFO: 127.0.0.1 - - [17/Nov/2026 22:59:05] "GET / HTTP/1.1" 200 -
+[2026-11-17 22:59:12,001] - INFO: 127.0.0.1 - - [17/Nov/2026 22:59:12] "GET / HTTP/1.1" 200 -
+[2026-11-17 22:59:17,315] - INFO: 127.0.0.1 - - [17/Nov/2026 22:59:17] "GET / HTTP/1.1" 200 -
+[2026-11-17 22:59:17,336] - INFO: 127.0.0.1 - - [17/Nov/2026 22:59:17] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:59:21,320] - INFO: User in login page
+[2026-11-17 22:59:21,322] - INFO: 127.0.0.1 - - [17/Nov/2026 22:59:21] "GET /login HTTP/1.1" 200 -
+[2026-11-17 22:59:21,343] - INFO: 127.0.0.1 - - [17/Nov/2026 22:59:21] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 22:59:47,819] - WARNING: Email Not Exists
+[2026-11-17 22:59:47,820] - INFO: 127.0.0.1 - - [17/Nov/2026 22:59:47] "POST /login HTTP/1.1" 302 -
+[2026-11-17 22:59:47,823] - INFO: User in login page
+[2026-11-17 22:59:47,826] - INFO: 127.0.0.1 - - [17/Nov/2026 22:59:47] "GET /login HTTP/1.1" 200 -
+[2026-11-17 22:59:47,837] - INFO: 127.0.0.1 - - [17/Nov/2026 22:59:47] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 23:00:01,389] - INFO: Moulya Meruva entering admin dashboard
+[2026-11-17 23:00:01,390] - INFO: 127.0.0.1 - - [17/Nov/2026 23:00:01] "POST /login HTTP/1.1" 302 -
+[2026-11-17 23:00:07,221] - INFO: 127.0.0.1 - - [17/Nov/2026 23:00:07] "GET /admin/dashboard HTTP/1.1" 200 -
+[2026-11-17 23:00:07,235] - INFO: 127.0.0.1 - - [17/Nov/2026 23:00:07] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 23:01:04,997] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:04] "GET /admin/products HTTP/1.1" 200 -
+[2026-11-17 23:01:05,010] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:05] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 23:01:05,012] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:05] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 23:01:05,028] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:05] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 23:01:05,028] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:05] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 23:01:05,033] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:05] "GET /static/images/products/9b606c61ee1c429bb362e09c09db3c2e.png HTTP/1.1" 304 -
+[2026-11-17 23:01:05,037] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:05] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 23:01:05,037] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:05] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 23:01:05,043] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:05] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 23:01:23,132] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:23] "GET /admin/users HTTP/1.1" 200 -
+[2026-11-17 23:01:23,141] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:23] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 23:01:33,166] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:33] "GET / HTTP/1.1" 200 -
+[2026-11-17 23:01:33,176] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:33] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 23:01:40,048] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:40] "GET /admin/products HTTP/1.1" 200 -
+[2026-11-17 23:01:40,068] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:40] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 23:01:40,071] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:40] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 23:01:40,080] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:40] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 23:01:40,089] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:40] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 23:01:40,094] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:40] "GET /static/images/products/9b606c61ee1c429bb362e09c09db3c2e.png HTTP/1.1" 304 -
+[2026-11-17 23:01:40,106] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:40] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 23:01:40,108] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:40] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 23:01:40,111] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:40] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 23:01:43,645] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:43] "GET /admin/products HTTP/1.1" 200 -
+[2026-11-17 23:01:43,665] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:43] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 23:01:43,668] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:43] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 23:01:43,677] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:43] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 23:01:43,683] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:43] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 23:01:43,690] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:43] "GET /static/images/products/9b606c61ee1c429bb362e09c09db3c2e.png HTTP/1.1" 304 -
+[2026-11-17 23:01:43,691] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:43] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 23:01:43,700] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:43] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 23:01:43,702] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:43] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 23:01:48,507] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:48] "GET /admin/add-product HTTP/1.1" 200 -
+[2026-11-17 23:01:48,519] - INFO: 127.0.0.1 - - [17/Nov/2026 23:01:48] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 23:02:19,629] - INFO: 127.0.0.1 - - [17/Nov/2026 23:02:19] "GET /admin/products HTTP/1.1" 200 -
+[2026-11-17 23:02:19,642] - INFO: 127.0.0.1 - - [17/Nov/2026 23:02:19] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 23:02:19,647] - INFO: 127.0.0.1 - - [17/Nov/2026 23:02:19] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 23:02:19,656] - INFO: 127.0.0.1 - - [17/Nov/2026 23:02:19] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 23:02:19,657] - INFO: 127.0.0.1 - - [17/Nov/2026 23:02:19] "GET /static/images/products/9b606c61ee1c429bb362e09c09db3c2e.png HTTP/1.1" 304 -
+[2026-11-17 23:02:19,660] - INFO: 127.0.0.1 - - [17/Nov/2026 23:02:19] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 23:02:19,663] - INFO: 127.0.0.1 - - [17/Nov/2026 23:02:19] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 23:02:19,667] - INFO: 127.0.0.1 - - [17/Nov/2026 23:02:19] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 23:02:19,671] - INFO: 127.0.0.1 - - [17/Nov/2026 23:02:19] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 23:02:43,415] - INFO: 127.0.0.1 - - [17/Nov/2026 23:02:43] "GET /admin/add-product HTTP/1.1" 200 -
+[2026-11-17 23:02:43,425] - INFO: 127.0.0.1 - - [17/Nov/2026 23:02:43] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 23:02:47,239] - INFO: 127.0.0.1 - - [17/Nov/2026 23:02:47] "GET /admin/products HTTP/1.1" 200 -
+[2026-11-17 23:02:47,249] - INFO: 127.0.0.1 - - [17/Nov/2026 23:02:47] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 23:02:47,252] - INFO: 127.0.0.1 - - [17/Nov/2026 23:02:47] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 23:02:47,253] - INFO: 127.0.0.1 - - [17/Nov/2026 23:02:47] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 23:02:47,269] - INFO: 127.0.0.1 - - [17/Nov/2026 23:02:47] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 23:02:47,269] - INFO: 127.0.0.1 - - [17/Nov/2026 23:02:47] "GET /static/images/products/9b606c61ee1c429bb362e09c09db3c2e.png HTTP/1.1" 304 -
+[2026-11-17 23:02:47,270] - INFO: 127.0.0.1 - - [17/Nov/2026 23:02:47] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 23:02:47,286] - INFO: 127.0.0.1 - - [17/Nov/2026 23:02:47] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 23:02:47,289] - INFO: 127.0.0.1 - - [17/Nov/2026 23:02:47] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 23:03:47,133] - INFO: 127.0.0.1 - - [17/Nov/2026 23:03:47] "GET /admin/add-product HTTP/1.1" 200 -
+[2026-11-17 23:03:47,141] - INFO: 127.0.0.1 - - [17/Nov/2026 23:03:47] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 23:08:02,771] - INFO: 127.0.0.1 - - [17/Nov/2026 23:08:02] "POST /admin/add-product HTTP/1.1" 302 -
+[2026-11-17 23:08:05,036] - INFO: 127.0.0.1 - - [17/Nov/2026 23:08:05] "GET /admin/products HTTP/1.1" 200 -
+[2026-11-17 23:08:05,065] - INFO: 127.0.0.1 - - [17/Nov/2026 23:08:05] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 23:08:05,069] - INFO: 127.0.0.1 - - [17/Nov/2026 23:08:05] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 23:08:05,079] - INFO: 127.0.0.1 - - [17/Nov/2026 23:08:05] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 23:08:05,082] - INFO: 127.0.0.1 - - [17/Nov/2026 23:08:05] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 23:08:05,084] - INFO: 127.0.0.1 - - [17/Nov/2026 23:08:05] "GET /static/images/products/9b606c61ee1c429bb362e09c09db3c2e.png HTTP/1.1" 304 -
+[2026-11-17 23:08:05,086] - INFO: 127.0.0.1 - - [17/Nov/2026 23:08:05] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 200 -
+[2026-11-17 23:08:05,095] - INFO: 127.0.0.1 - - [17/Nov/2026 23:08:05] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 23:08:05,097] - INFO: 127.0.0.1 - - [17/Nov/2026 23:08:05] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 23:08:23,398] - INFO: 127.0.0.1 - - [17/Nov/2026 23:08:23] "GET /admin/users HTTP/1.1" 200 -
+[2026-11-17 23:08:23,410] - INFO: 127.0.0.1 - - [17/Nov/2026 23:08:23] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 23:08:29,707] - INFO: 127.0.0.1 - - [17/Nov/2026 23:08:29] "GET /admin/orders HTTP/1.1" 200 -
+[2026-11-17 23:08:29,716] - INFO: 127.0.0.1 - - [17/Nov/2026 23:08:29] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 23:09:57,708] - INFO: 127.0.0.1 - - [17/Nov/2026 23:09:57] "GET /logout HTTP/1.1" 302 -
+[2026-11-17 23:09:58,807] - INFO: 127.0.0.1 - - [17/Nov/2026 23:09:58] "GET / HTTP/1.1" 200 -
+[2026-11-17 23:09:58,817] - INFO: 127.0.0.1 - - [17/Nov/2026 23:09:58] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 23:10:00,999] - INFO: User in register page
+[2026-11-17 23:10:01,024] - INFO: 127.0.0.1 - - [17/Nov/2026 23:10:01] "GET /register HTTP/1.1" 200 -
+[2026-11-17 23:10:01,036] - INFO: 127.0.0.1 - - [17/Nov/2026 23:10:01] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 23:10:37,157] - INFO: Account created
+[2026-11-17 23:10:37,158] - INFO: 127.0.0.1 - - [17/Nov/2026 23:10:37] "POST /register HTTP/1.1" 302 -
+[2026-11-17 23:10:37,162] - INFO: User in login page
+[2026-11-17 23:10:37,162] - INFO: 127.0.0.1 - - [17/Nov/2026 23:10:37] "GET /login HTTP/1.1" 200 -
+[2026-11-17 23:10:37,176] - INFO: 127.0.0.1 - - [17/Nov/2026 23:10:37] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 23:10:54,141] - WARNING: Password incorrect
+[2026-11-17 23:10:54,142] - INFO: 127.0.0.1 - - [17/Nov/2026 23:10:54] "POST /login HTTP/1.1" 302 -
+[2026-11-17 23:10:54,146] - INFO: User in login page
+[2026-11-17 23:10:54,147] - INFO: 127.0.0.1 - - [17/Nov/2026 23:10:54] "GET /login HTTP/1.1" 200 -
+[2026-11-17 23:10:54,161] - INFO: 127.0.0.1 - - [17/Nov/2026 23:10:54] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 23:11:13,819] - WARNING: Password incorrect
+[2026-11-17 23:11:13,820] - INFO: 127.0.0.1 - - [17/Nov/2026 23:11:13] "POST /login HTTP/1.1" 302 -
+[2026-11-17 23:11:13,824] - INFO: User in login page
+[2026-11-17 23:11:13,825] - INFO: 127.0.0.1 - - [17/Nov/2026 23:11:13] "GET /login HTTP/1.1" 200 -
+[2026-11-17 23:11:13,838] - INFO: 127.0.0.1 - - [17/Nov/2026 23:11:13] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 23:11:27,697] - WARNING: Password incorrect
+[2026-11-17 23:11:27,698] - INFO: 127.0.0.1 - - [17/Nov/2026 23:11:27] "POST /login HTTP/1.1" 302 -
+[2026-11-17 23:11:27,702] - INFO: User in login page
+[2026-11-17 23:11:27,703] - INFO: 127.0.0.1 - - [17/Nov/2026 23:11:27] "GET /login HTTP/1.1" 200 -
+[2026-11-17 23:11:27,717] - INFO: 127.0.0.1 - - [17/Nov/2026 23:11:27] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 23:11:54,692] - WARNING: Password incorrect
+[2026-11-17 23:11:54,693] - INFO: 127.0.0.1 - - [17/Nov/2026 23:11:54] "POST /login HTTP/1.1" 302 -
+[2026-11-17 23:11:54,697] - INFO: User in login page
+[2026-11-17 23:11:54,699] - INFO: 127.0.0.1 - - [17/Nov/2026 23:11:54] "GET /login HTTP/1.1" 200 -
+[2026-11-17 23:11:54,711] - INFO: 127.0.0.1 - - [17/Nov/2026 23:11:54] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 23:12:04,236] - INFO: User in register page
+[2026-11-17 23:12:04,237] - INFO: 127.0.0.1 - - [17/Nov/2026 23:12:04] "GET /register HTTP/1.1" 200 -
+[2026-11-17 23:12:04,255] - INFO: 127.0.0.1 - - [17/Nov/2026 23:12:04] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 23:12:33,741] - WARNING: shannu@gmail.com Email Already Exists
+[2026-11-17 23:12:33,742] - INFO: 127.0.0.1 - - [17/Nov/2026 23:12:33] "POST /register HTTP/1.1" 302 -
+[2026-11-17 23:12:33,746] - INFO: User in register page
+[2026-11-17 23:12:33,748] - INFO: 127.0.0.1 - - [17/Nov/2026 23:12:33] "GET /register HTTP/1.1" 200 -
+[2026-11-17 23:12:33,760] - INFO: 127.0.0.1 - - [17/Nov/2026 23:12:33] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 23:12:47,432] - INFO: User in login page
+[2026-11-17 23:12:47,433] - INFO: 127.0.0.1 - - [17/Nov/2026 23:12:47] "GET /login HTTP/1.1" 200 -
+[2026-11-17 23:12:47,442] - INFO: 127.0.0.1 - - [17/Nov/2026 23:12:47] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 23:13:00,202] - WARNING: Password incorrect
+[2026-11-17 23:13:00,203] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:00] "POST /login HTTP/1.1" 302 -
+[2026-11-17 23:13:00,209] - INFO: User in login page
+[2026-11-17 23:13:00,210] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:00] "GET /login HTTP/1.1" 200 -
+[2026-11-17 23:13:00,225] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:00] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 23:13:13,973] - INFO: Moulya Meruva entering admin dashboard
+[2026-11-17 23:13:13,974] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:13] "POST /login HTTP/1.1" 302 -
+[2026-11-17 23:13:16,815] - INFO: Moulya Meruva entering admin dashboard
+[2026-11-17 23:13:16,816] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:16] "POST /login HTTP/1.1" 302 -
+[2026-11-17 23:13:17,959] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:17] "GET /admin/dashboard HTTP/1.1" 200 -
+[2026-11-17 23:13:22,626] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:22] "GET /admin/dashboard HTTP/1.1" 200 -
+[2026-11-17 23:13:24,022] - INFO: Moulya Meruva entering admin dashboard
+[2026-11-17 23:13:24,023] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:24] "POST /login HTTP/1.1" 302 -
+[2026-11-17 23:13:31,945] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:31] "GET /admin/dashboard HTTP/1.1" 200 -
+[2026-11-17 23:13:31,959] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:31] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 23:13:38,913] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:38] "GET /admin/products HTTP/1.1" 200 -
+[2026-11-17 23:13:38,932] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:38] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 23:13:38,935] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:38] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 304 -
+[2026-11-17 23:13:38,944] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:38] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 23:13:38,949] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:38] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 23:13:38,958] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:38] "GET /static/images/products/9b606c61ee1c429bb362e09c09db3c2e.png HTTP/1.1" 304 -
+[2026-11-17 23:13:38,960] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:38] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 23:13:38,964] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:38] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 23:13:38,970] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:38] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 23:13:44,206] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:44] "GET /logout HTTP/1.1" 302 -
+[2026-11-17 23:13:47,535] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:47] "GET / HTTP/1.1" 200 -
+[2026-11-17 23:13:47,546] - INFO: 127.0.0.1 - - [17/Nov/2026 23:13:47] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 23:14:21,864] - INFO: User in login page
+[2026-11-17 23:14:21,864] - INFO: 127.0.0.1 - - [17/Nov/2026 23:14:21] "GET /login HTTP/1.1" 200 -
+[2026-11-17 23:14:21,878] - INFO: 127.0.0.1 - - [17/Nov/2026 23:14:21] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 23:14:37,790] - INFO: moulya entering products page
+[2026-11-17 23:14:37,791] - INFO: 127.0.0.1 - - [17/Nov/2026 23:14:37] "POST /login HTTP/1.1" 302 -
+[2026-11-17 23:14:40,057] - INFO: 127.0.0.1 - - [17/Nov/2026 23:14:40] "GET /products HTTP/1.1" 200 -
+[2026-11-17 23:14:40,076] - INFO: 127.0.0.1 - - [17/Nov/2026 23:14:40] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 23:14:40,078] - INFO: 127.0.0.1 - - [17/Nov/2026 23:14:40] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-17 23:14:40,080] - INFO: 127.0.0.1 - - [17/Nov/2026 23:14:40] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 304 -
+[2026-11-17 23:14:40,083] - INFO: 127.0.0.1 - - [17/Nov/2026 23:14:40] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-17 23:14:40,090] - INFO: 127.0.0.1 - - [17/Nov/2026 23:14:40] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-17 23:14:40,093] - INFO: 127.0.0.1 - - [17/Nov/2026 23:14:40] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-17 23:14:40,098] - INFO: 127.0.0.1 - - [17/Nov/2026 23:14:40] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-17 23:14:40,103] - INFO: 127.0.0.1 - - [17/Nov/2026 23:14:40] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-17 23:14:40,106] - INFO: 127.0.0.1 - - [17/Nov/2026 23:14:40] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-17 23:14:40,110] - INFO: 127.0.0.1 - - [17/Nov/2026 23:14:40] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-17 23:14:45,093] - INFO: 127.0.0.1 - - [17/Nov/2026 23:14:45] "GET /logout HTTP/1.1" 302 -
+[2026-11-17 23:14:46,360] - INFO: 127.0.0.1 - - [17/Nov/2026 23:14:46] "GET / HTTP/1.1" 200 -
+[2026-11-17 23:14:46,371] - INFO: 127.0.0.1 - - [17/Nov/2026 23:14:46] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 23:14:48,018] - INFO: User in login page
+[2026-11-17 23:14:48,019] - INFO: 127.0.0.1 - - [17/Nov/2026 23:14:48] "GET /login HTTP/1.1" 200 -
+[2026-11-17 23:14:48,029] - INFO: 127.0.0.1 - - [17/Nov/2026 23:14:48] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 23:15:00,923] - WARNING: Password incorrect
+[2026-11-17 23:15:00,925] - INFO: 127.0.0.1 - - [17/Nov/2026 23:15:00] "POST /login HTTP/1.1" 302 -
+[2026-11-17 23:15:00,932] - INFO: User in login page
+[2026-11-17 23:15:00,933] - INFO: 127.0.0.1 - - [17/Nov/2026 23:15:00] "GET /login HTTP/1.1" 200 -
+[2026-11-17 23:15:00,946] - INFO: 127.0.0.1 - - [17/Nov/2026 23:15:00] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-17 23:15:11,409] - INFO: Moulya Meruva entering admin dashboard
+[2026-11-17 23:15:11,410] - INFO: 127.0.0.1 - - [17/Nov/2026 23:15:11] "POST /login HTTP/1.1" 302 -
+[2026-11-17 23:15:13,684] - INFO: Moulya Meruva entering admin dashboard
+[2026-11-17 23:15:13,685] - INFO: 127.0.0.1 - - [17/Nov/2026 23:15:13] "POST /login HTTP/1.1" 302 -
+[2026-11-17 23:15:15,633] - INFO: 127.0.0.1 - - [17/Nov/2026 23:15:15] "GET /admin/dashboard HTTP/1.1" 200 -
+[2026-11-17 23:15:17,217] - INFO: 127.0.0.1 - - [17/Nov/2026 23:15:17] "GET /admin/dashboard HTTP/1.1" 200 -
+[2026-11-17 23:15:17,238] - INFO: 127.0.0.1 - - [17/Nov/2026 23:15:17] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-17 23:15:35,222] - INFO: 127.0.0.1 - - [17/Nov/2026 23:15:35] "GET /admin/orders HTTP/1.1" 200 -
+[2026-11-17 23:15:35,234] - INFO: 127.0.0.1 - - [17/Nov/2026 23:15:35] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-18 11:25:14,410] - INFO: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+[2026-11-18 11:25:14,411] - INFO: Press CTRL+C to quit
+[2026-11-18 11:25:14,415] - INFO:  * Restarting with stat
+[2026-11-18 11:25:15,051] - WARNING:  * Debugger is active!
+[2026-11-18 11:25:15,061] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-18 11:25:43,779] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:43] "GET / HTTP/1.1" 200 -
+[2026-11-18 11:25:44,040] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:44] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:25:44,120] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:44] "GET /favicon.ico HTTP/1.1" 404 -
+[2026-11-18 11:25:51,012] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:51] "GET /products HTTP/1.1" 200 -
+[2026-11-18 11:25:51,028] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:51] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:25:51,042] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:51] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:25:51,045] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:51] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-18 11:25:51,052] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:51] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-18 11:25:51,062] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:51] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:25:51,064] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:51] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:25:51,071] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:51] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:25:51,077] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:51] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-18 11:25:51,084] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:51] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-18 11:25:51,088] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:51] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-18 11:25:59,887] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:59] "GET /products HTTP/1.1" 200 -
+[2026-11-18 11:25:59,908] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:59] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:25:59,914] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:59] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:25:59,918] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:59] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-18 11:25:59,926] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:59] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:25:59,933] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:59] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:25:59,937] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:59] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-18 11:25:59,946] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:59] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:25:59,949] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:59] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-18 11:25:59,956] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:59] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-18 11:25:59,959] - INFO: 127.0.0.1 - - [18/Nov/2026 11:25:59] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-18 11:26:04,557] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:04] "GET /products HTTP/1.1" 200 -
+[2026-11-18 11:26:04,576] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:04] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:26:04,579] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:04] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:26:04,591] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:04] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:26:04,595] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:04] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-18 11:26:04,597] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:04] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:26:04,609] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:04] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-18 11:26:04,615] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:04] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:26:04,618] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:04] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-18 11:26:04,627] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:04] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-18 11:26:04,633] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:04] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-18 11:26:22,598] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:22] "GET /products/11/details HTTP/1.1" 200 -
+[2026-11-18 11:26:22,613] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:22] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:26:22,618] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:22] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:26:22,621] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:22] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:26:25,494] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:25] "POST /cart/add/11 HTTP/1.1" 302 -
+[2026-11-18 11:26:25,506] - INFO: User in login page
+[2026-11-18 11:26:25,555] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:25] "GET /login HTTP/1.1" 200 -
+[2026-11-18 11:26:25,569] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:25] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:26:44,156] - INFO: moulya entering products page
+[2026-11-18 11:26:44,157] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:44] "POST /login HTTP/1.1" 302 -
+[2026-11-18 11:26:46,554] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:46] "GET /products HTTP/1.1" 200 -
+[2026-11-18 11:26:46,709] - INFO: moulya entering products page
+[2026-11-18 11:26:46,711] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:46] "POST /login HTTP/1.1" 302 -
+[2026-11-18 11:26:49,040] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:49] "GET /products HTTP/1.1" 200 -
+[2026-11-18 11:26:49,074] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:49] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:26:49,079] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:49] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:26:49,087] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:49] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:26:49,093] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:49] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-18 11:26:49,094] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:49] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:26:49,094] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:49] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-18 11:26:49,106] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:49] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:26:49,114] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:49] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-18 11:26:49,120] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:49] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-18 11:26:49,120] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:49] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-18 11:26:54,715] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:54] "GET /products/11/details HTTP/1.1" 200 -
+[2026-11-18 11:26:54,732] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:54] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:26:54,737] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:54] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:26:54,738] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:54] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:26:58,832] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:58] "POST /cart/add/11 HTTP/1.1" 302 -
+[2026-11-18 11:26:59,918] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:59] "GET /products/11/details HTTP/1.1" 200 -
+[2026-11-18 11:26:59,952] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:59] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:26:59,956] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:59] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:26:59,959] - INFO: 127.0.0.1 - - [18/Nov/2026 11:26:59] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:27:03,968] - INFO: 127.0.0.1 - - [18/Nov/2026 11:27:03] "GET /cart HTTP/1.1" 200 -
+[2026-11-18 11:27:03,986] - INFO: 127.0.0.1 - - [18/Nov/2026 11:27:03] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:27:03,992] - INFO: 127.0.0.1 - - [18/Nov/2026 11:27:03] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:27:03,995] - INFO: 127.0.0.1 - - [18/Nov/2026 11:27:03] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:27:09,537] - INFO: 127.0.0.1 - - [18/Nov/2026 11:27:09] "GET /checkout HTTP/1.1" 200 -
+[2026-11-18 11:27:09,553] - INFO: 127.0.0.1 - - [18/Nov/2026 11:27:09] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:27:09,556] - INFO: 127.0.0.1 - - [18/Nov/2026 11:27:09] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:28:08,303] - INFO: 127.0.0.1 - - [18/Nov/2026 11:28:08] "POST /checkout HTTP/1.1" 200 -
+[2026-11-18 11:28:08,334] - INFO: 127.0.0.1 - - [18/Nov/2026 11:28:08] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:28:08,342] - INFO: 127.0.0.1 - - [18/Nov/2026 11:28:08] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:31:51,408] - INFO: 127.0.0.1 - - [18/Nov/2026 11:31:51] "GET /payment/failed?order_id=12 HTTP/1.1" 302 -
+[2026-11-18 11:31:52,464] - INFO: 127.0.0.1 - - [18/Nov/2026 11:31:52] "GET /orders HTTP/1.1" 200 -
+[2026-11-18 11:31:52,490] - INFO: 127.0.0.1 - - [18/Nov/2026 11:31:52] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:31:52,491] - INFO: 127.0.0.1 - - [18/Nov/2026 11:31:52] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:38:24,986] - INFO: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+[2026-11-18 11:38:24,986] - INFO: Press CTRL+C to quit
+[2026-11-18 11:38:24,989] - INFO:  * Restarting with stat
+[2026-11-18 11:38:25,826] - WARNING:  * Debugger is active!
+[2026-11-18 11:38:25,830] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-18 11:39:02,965] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:02] "GET / HTTP/1.1" 200 -
+[2026-11-18 11:39:03,176] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:03] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:39:13,125] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:13] "GET /products HTTP/1.1" 200 -
+[2026-11-18 11:39:13,148] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:13] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:39:13,156] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:13] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:39:13,157] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:13] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:39:13,165] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:13] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:39:13,177] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:13] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-18 11:39:13,181] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:13] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-18 11:39:13,194] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:13] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-18 11:39:13,194] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:13] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:39:13,194] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:13] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-18 11:39:13,196] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:13] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-18 11:39:16,280] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:16] "GET /orders HTTP/1.1" 200 -
+[2026-11-18 11:39:16,299] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:16] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:39:16,306] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:16] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:39:28,746] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:28] "GET /profile HTTP/1.1" 200 -
+[2026-11-18 11:39:28,760] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:28] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:39:28,763] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:28] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:39:32,568] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:32] "GET /cart HTTP/1.1" 200 -
+[2026-11-18 11:39:32,587] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:32] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:39:32,596] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:32] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:39:39,504] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:39] "GET /products HTTP/1.1" 200 -
+[2026-11-18 11:39:39,522] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:39] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:39:39,535] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:39] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:39:39,542] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:39] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-18 11:39:39,544] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:39] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:39:39,552] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:39] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:39:39,552] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:39] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-18 11:39:39,558] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:39] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:39:39,567] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:39] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-18 11:39:39,572] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:39] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-18 11:39:39,573] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:39] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-18 11:39:42,107] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:42] "GET /orders HTTP/1.1" 200 -
+[2026-11-18 11:39:42,127] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:42] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:39:42,131] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:42] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:39:51,531] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:51] "GET /products HTTP/1.1" 200 -
+[2026-11-18 11:39:51,549] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:51] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:39:51,566] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:51] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:39:51,568] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:51] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:39:51,574] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:51] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-18 11:39:51,579] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:51] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:39:51,587] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:51] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-18 11:39:51,591] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:51] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:39:51,602] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:51] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-18 11:39:51,604] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:51] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-18 11:39:51,612] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:51] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-18 11:39:59,979] - INFO: 127.0.0.1 - - [18/Nov/2026 11:39:59] "GET /products/5/details HTTP/1.1" 200 -
+[2026-11-18 11:40:00,002] - INFO: 127.0.0.1 - - [18/Nov/2026 11:40:00] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:40:00,003] - INFO: 127.0.0.1 - - [18/Nov/2026 11:40:00] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:40:00,006] - INFO: 127.0.0.1 - - [18/Nov/2026 11:40:00] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-18 11:40:04,025] - INFO: 127.0.0.1 - - [18/Nov/2026 11:40:04] "POST /cart/add/5 HTTP/1.1" 302 -
+[2026-11-18 11:40:05,051] - INFO: 127.0.0.1 - - [18/Nov/2026 11:40:05] "GET /products/5/details HTTP/1.1" 200 -
+[2026-11-18 11:40:05,090] - INFO: 127.0.0.1 - - [18/Nov/2026 11:40:05] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:40:05,090] - INFO: 127.0.0.1 - - [18/Nov/2026 11:40:05] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:40:05,093] - INFO: 127.0.0.1 - - [18/Nov/2026 11:40:05] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-18 11:40:09,016] - INFO: 127.0.0.1 - - [18/Nov/2026 11:40:09] "GET /cart HTTP/1.1" 200 -
+[2026-11-18 11:40:09,033] - INFO: 127.0.0.1 - - [18/Nov/2026 11:40:09] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:40:09,039] - INFO: 127.0.0.1 - - [18/Nov/2026 11:40:09] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:40:09,044] - INFO: 127.0.0.1 - - [18/Nov/2026 11:40:09] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-18 11:40:12,874] - INFO: 127.0.0.1 - - [18/Nov/2026 11:40:12] "GET /checkout HTTP/1.1" 200 -
+[2026-11-18 11:40:12,890] - INFO: 127.0.0.1 - - [18/Nov/2026 11:40:12] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:40:59,532] - INFO: 127.0.0.1 - - [18/Nov/2026 11:40:59] "POST /checkout HTTP/1.1" 200 -
+[2026-11-18 11:40:59,567] - INFO: 127.0.0.1 - - [18/Nov/2026 11:40:59] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:43:27,565] - INFO: 127.0.0.1 - - [18/Nov/2026 11:43:27] "GET /payment/failed?order_id=13 HTTP/1.1" 302 -
+[2026-11-18 11:43:32,261] - INFO: 127.0.0.1 - - [18/Nov/2026 11:43:32] "GET /orders HTTP/1.1" 200 -
+[2026-11-18 11:43:32,298] - INFO: 127.0.0.1 - - [18/Nov/2026 11:43:32] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:43:32,298] - INFO: 127.0.0.1 - - [18/Nov/2026 11:43:32] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:44:12,459] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:12] "GET /products HTTP/1.1" 200 -
+[2026-11-18 11:44:12,485] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:12] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:44:12,490] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:12] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:44:12,494] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:12] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:44:12,503] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:12] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-18 11:44:12,505] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:12] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:44:12,519] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:12] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-18 11:44:12,523] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:12] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-18 11:44:12,533] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:12] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-18 11:44:12,535] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:12] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-18 11:44:12,540] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:12] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-18 11:44:21,378] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:21] "GET /products/5/details HTTP/1.1" 200 -
+[2026-11-18 11:44:21,394] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:21] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:44:21,402] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:21] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:44:21,403] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:21] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-18 11:44:25,355] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:25] "POST /cart/add/5 HTTP/1.1" 302 -
+[2026-11-18 11:44:26,375] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:26] "GET /products/5/details HTTP/1.1" 200 -
+[2026-11-18 11:44:26,418] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:26] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:44:26,419] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:26] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:44:26,421] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:26] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-18 11:44:29,350] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:29] "GET /cart HTTP/1.1" 200 -
+[2026-11-18 11:44:29,371] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:29] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:44:29,376] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:29] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 11:44:29,380] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:29] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-18 11:44:33,868] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:33] "GET /checkout HTTP/1.1" 200 -
+[2026-11-18 11:44:33,880] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:33] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:44:56,022] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:56] "POST /checkout HTTP/1.1" 200 -
+[2026-11-18 11:44:56,040] - INFO: 127.0.0.1 - - [18/Nov/2026 11:44:56] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:45:55,543] - INFO: 127.0.0.1 - - [18/Nov/2026 11:45:55] "POST /payment/verify HTTP/1.1" 302 -
+[2026-11-18 11:45:56,613] - INFO: 127.0.0.1 - - [18/Nov/2026 11:45:56] "GET /orders HTTP/1.1" 200 -
+[2026-11-18 11:45:56,645] - INFO: 127.0.0.1 - - [18/Nov/2026 11:45:56] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 11:45:56,647] - INFO: 127.0.0.1 - - [18/Nov/2026 11:45:56] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 12:16:42,355] - INFO:  * Detected change in 'C:\\Users\\moulya_meruva\\OneDrive\\Desktop\\Ecommerce-website\\app.py', reloading
+[2026-11-18 12:16:42,479] - INFO:  * Restarting with stat
+[2026-11-18 12:16:43,646] - WARNING:  * Debugger is active!
+[2026-11-18 12:16:43,651] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-18 12:16:44,729] - INFO:  * Detected change in 'C:\\Users\\moulya_meruva\\OneDrive\\Desktop\\Ecommerce-website\\app.py', reloading
+[2026-11-18 12:16:44,878] - INFO:  * Restarting with stat
+[2026-11-18 12:16:46,717] - WARNING:  * Debugger is active!
+[2026-11-18 12:16:46,722] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-18 12:16:59,983] - INFO:  * Detected change in 'C:\\Users\\moulya_meruva\\OneDrive\\Desktop\\Ecommerce-website\\app.py', reloading
+[2026-11-18 12:17:00,099] - INFO:  * Restarting with stat
+[2026-11-18 12:17:01,217] - WARNING:  * Debugger is active!
+[2026-11-18 12:17:01,226] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-18 12:17:02,268] - INFO:  * Detected change in 'C:\\Users\\moulya_meruva\\OneDrive\\Desktop\\Ecommerce-website\\app.py', reloading
+[2026-11-18 12:17:02,376] - INFO:  * Restarting with stat
+[2026-11-18 12:17:03,619] - WARNING:  * Debugger is active!
+[2026-11-18 12:17:03,624] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-18 12:17:05,688] - INFO:  * Detected change in 'C:\\Users\\moulya_meruva\\OneDrive\\Desktop\\Ecommerce-website\\app.py', reloading
+[2026-11-18 12:17:05,781] - INFO:  * Restarting with stat
+[2026-11-18 12:17:06,778] - WARNING:  * Debugger is active!
+[2026-11-18 12:17:06,788] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-18 12:18:33,893] - INFO: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+[2026-11-18 12:18:33,894] - INFO: Press CTRL+C to quit
+[2026-11-18 12:18:33,899] - INFO:  * Restarting with stat
+[2026-11-18 12:18:34,964] - WARNING:  * Debugger is active!
+[2026-11-18 12:18:34,968] - INFO:  * Debugger PIN: 324-591-804
+[2026-11-18 12:19:13,724] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:13] "GET / HTTP/1.1" 200 -
+[2026-11-18 12:19:13,960] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:13] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:19:23,646] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:23] "GET /products HTTP/1.1" 200 -
+[2026-11-18 12:19:23,674] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:23] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:19:23,680] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:23] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 304 -
+[2026-11-18 12:19:23,682] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:23] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 12:19:23,685] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:23] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-18 12:19:23,692] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:23] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-18 12:19:23,699] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:23] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-18 12:19:23,711] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:23] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-18 12:19:23,721] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:23] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-18 12:19:23,723] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:23] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-18 12:19:23,731] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:23] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-18 12:19:35,314] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:35] "GET /products/1/details HTTP/1.1" 200 -
+[2026-11-18 12:19:35,334] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:35] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:19:35,343] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:35] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-18 12:19:35,345] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:35] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 12:19:39,388] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:39] "POST /cart/add/1 HTTP/1.1" 302 -
+[2026-11-18 12:19:40,421] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:40] "GET /products/1/details HTTP/1.1" 200 -
+[2026-11-18 12:19:40,462] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:40] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:19:40,464] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:40] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 12:19:40,466] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:40] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-18 12:19:44,724] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:44] "GET /cart HTTP/1.1" 200 -
+[2026-11-18 12:19:44,742] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:44] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:19:44,750] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:44] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-18 12:19:44,757] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:44] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 12:19:47,812] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:47] "GET /checkout HTTP/1.1" 200 -
+[2026-11-18 12:19:47,827] - INFO: 127.0.0.1 - - [18/Nov/2026 12:19:47] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:20:09,665] - INFO: 127.0.0.1 - - [18/Nov/2026 12:20:09] "POST /checkout HTTP/1.1" 200 -
+[2026-11-18 12:20:09,687] - INFO: 127.0.0.1 - - [18/Nov/2026 12:20:09] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:22:45,346] - INFO: 127.0.0.1 - - [18/Nov/2026 12:22:45] "GET /payment/failed?order_id=15 HTTP/1.1" 302 -
+[2026-11-18 12:22:46,340] - INFO: 127.0.0.1 - - [18/Nov/2026 12:22:46] "GET /orders HTTP/1.1" 200 -
+[2026-11-18 12:22:48,849] - INFO: 127.0.0.1 - - [18/Nov/2026 12:22:48] "GET /payment/failed?order_id=15 HTTP/1.1" 302 -
+[2026-11-18 12:22:49,821] - INFO: 127.0.0.1 - - [18/Nov/2026 12:22:49] "GET /orders HTTP/1.1" 200 -
+[2026-11-18 12:22:49,839] - INFO: 127.0.0.1 - - [18/Nov/2026 12:22:49] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:22:49,840] - INFO: 127.0.0.1 - - [18/Nov/2026 12:22:49] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 12:23:37,036] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:37] "GET /orders HTTP/1.1" 200 -
+[2026-11-18 12:23:37,051] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:37] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:23:37,052] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:37] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 12:23:40,263] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:40] "GET /products HTTP/1.1" 200 -
+[2026-11-18 12:23:40,276] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:40] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:23:40,280] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:40] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 12:23:40,282] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:40] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 304 -
+[2026-11-18 12:23:40,286] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:40] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-18 12:23:40,289] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:40] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-18 12:23:40,292] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:40] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-18 12:23:40,300] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:40] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-18 12:23:40,302] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:40] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-18 12:23:40,306] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:40] "GET /static/images/products/3202493a-332e-4992-9c93-2c6ce903f8e8_watches.jpg HTTP/1.1" 304 -
+[2026-11-18 12:23:40,307] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:40] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-18 12:23:48,194] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:48] "GET /products/1/details HTTP/1.1" 200 -
+[2026-11-18 12:23:48,204] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:48] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 12:23:48,205] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:48] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:23:48,207] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:48] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-18 12:23:51,466] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:51] "POST /cart/add/1 HTTP/1.1" 302 -
+[2026-11-18 12:23:52,465] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:52] "GET /products/1/details HTTP/1.1" 200 -
+[2026-11-18 12:23:52,491] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:52] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:23:52,493] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:52] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 12:23:52,496] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:52] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-18 12:23:57,149] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:57] "GET /cart HTTP/1.1" 200 -
+[2026-11-18 12:23:57,158] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:57] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:23:57,167] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:57] "GET /static/images/products/40b4e921-dd8d-11f1-965c-d8b32fe1d4a8_wireless%20mouse.jpg HTTP/1.1" 304 -
+[2026-11-18 12:23:57,168] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:57] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 12:23:59,970] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:59] "GET /checkout HTTP/1.1" 200 -
+[2026-11-18 12:23:59,983] - INFO: 127.0.0.1 - - [18/Nov/2026 12:23:59] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:24:17,074] - INFO: 127.0.0.1 - - [18/Nov/2026 12:24:17] "POST /checkout HTTP/1.1" 200 -
+[2026-11-18 12:24:17,095] - INFO: 127.0.0.1 - - [18/Nov/2026 12:24:17] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:25:00,881] - ERROR: Payment verification error
+Traceback (most recent call last):
+  File "C:\Users\moulya_meruva\OneDrive\Desktop\Ecommerce-website\app.py", line 731, in payment_verify
+    url_for(
+    ~~~~~~~^
+        "order_success",
+        ^^^^^^^^^^^^^^^^
+        order_id=order_id
+        ^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\moulya_meruva\OneDrive\Desktop\Ecommerce-website\ecommerce_env\Lib\site-packages\flask\helpers.py", line 239, in url_for
+    return current_app.url_for(
+           ~~~~~~~~~~~~~~~~~~~^
+        endpoint,
+        ^^^^^^^^^
+    ...<4 lines>...
+        **values,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\moulya_meruva\OneDrive\Desktop\Ecommerce-website\ecommerce_env\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moulya_meruva\OneDrive\Desktop\Ecommerce-website\ecommerce_env\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\moulya_meruva\OneDrive\Desktop\Ecommerce-website\ecommerce_env\Lib\site-packages\werkzeug\routing\map.py", line 901, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'order_success' with values ['order_id']. Did you mean 'orders' instead?
+[2026-11-18 12:25:00,951] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:00] "POST /payment/verify HTTP/1.1" 302 -
+[2026-11-18 12:25:01,959] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:01] "GET /orders HTTP/1.1" 200 -
+[2026-11-18 12:25:01,975] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:01] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 12:25:01,975] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:01] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:25:11,422] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:11] "GET /profile HTTP/1.1" 200 -
+[2026-11-18 12:25:11,439] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:11] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:25:11,440] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:11] "GET /static/css/user.css HTTP/1.1" 304 -
+[2026-11-18 12:25:15,062] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:15] "GET /logout HTTP/1.1" 302 -
+[2026-11-18 12:25:16,072] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:16] "GET / HTTP/1.1" 200 -
+[2026-11-18 12:25:16,086] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:16] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:25:17,947] - INFO: User in login page
+[2026-11-18 12:25:17,952] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:17] "GET /login HTTP/1.1" 200 -
+[2026-11-18 12:25:17,961] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:17] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:25:27,900] - INFO: Moulya Meruva entering admin dashboard
+[2026-11-18 12:25:27,901] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:27] "POST /login HTTP/1.1" 302 -
+[2026-11-18 12:25:31,110] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:31] "GET /admin/dashboard HTTP/1.1" 200 -
+[2026-11-18 12:25:31,145] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:31] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-18 12:25:36,475] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:36] "GET /admin/products HTTP/1.1" 200 -
+[2026-11-18 12:25:36,485] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:36] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-18 12:25:36,488] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:36] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 304 -
+[2026-11-18 12:25:36,495] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:36] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-18 12:25:36,498] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:36] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-18 12:25:36,499] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:36] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-18 12:25:36,502] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:36] "GET /static/images/products/9b606c61ee1c429bb362e09c09db3c2e.png HTTP/1.1" 304 -
+[2026-11-18 12:25:36,505] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:36] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-18 12:25:36,507] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:36] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-18 12:25:55,782] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:55] "GET /admin/products HTTP/1.1" 200 -
+[2026-11-18 12:25:55,803] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:55] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-18 12:25:55,804] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:55] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 304 -
+[2026-11-18 12:25:55,811] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:55] "GET /static/images/products/9b606c61ee1c429bb362e09c09db3c2e.png HTTP/1.1" 304 -
+[2026-11-18 12:25:55,814] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:55] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-18 12:25:55,817] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:55] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-18 12:25:55,820] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:55] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-18 12:25:55,825] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:55] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-18 12:25:55,826] - INFO: 127.0.0.1 - - [18/Nov/2026 12:25:55] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-18 12:26:00,823] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:00] "GET /admin/products?search=&category=&status=&stock=&min_price=&max_price= HTTP/1.1" 200 -
+[2026-11-18 12:26:00,840] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:00] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-18 12:26:00,851] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:00] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-18 12:26:00,852] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:00] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 304 -
+[2026-11-18 12:26:00,857] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:00] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-18 12:26:00,871] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:00] "GET /static/images/products/9b606c61ee1c429bb362e09c09db3c2e.png HTTP/1.1" 304 -
+[2026-11-18 12:26:00,871] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:00] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-18 12:26:00,874] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:00] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-18 12:26:00,877] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:00] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-18 12:26:04,091] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:04] "GET /admin/products?search=&category=&status=&stock=&min_price=&max_price= HTTP/1.1" 200 -
+[2026-11-18 12:26:04,110] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:04] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-18 12:26:04,116] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:04] "GET /static/images/products/30ba77d316b24716865918e29fef1fde.jpeg HTTP/1.1" 304 -
+[2026-11-18 12:26:04,120] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:04] "GET /static/images/products/f4e973f8953e41e796142ce63f61d4c6.jpg HTTP/1.1" 304 -
+[2026-11-18 12:26:04,128] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:04] "GET /static/images/products/acf7d5fa876c4de9828240d7b8edc6c9.jpeg HTTP/1.1" 304 -
+[2026-11-18 12:26:04,134] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:04] "GET /static/images/products/ca4e3b6188fa48a6b0e2b407aaa59710.webp HTTP/1.1" 304 -
+[2026-11-18 12:26:04,136] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:04] "GET /static/images/products/9b606c61ee1c429bb362e09c09db3c2e.png HTTP/1.1" 304 -
+[2026-11-18 12:26:04,139] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:04] "GET /static/images/products/d8d1515b1f784f03a32507e93214751a.jpeg HTTP/1.1" 304 -
+[2026-11-18 12:26:04,142] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:04] "GET /static/images/products/0961165b-dd94-11f1-ada3-d8b32fe1d4a8_dairyimg.jpg HTTP/1.1" 304 -
+[2026-11-18 12:26:22,691] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:22] "GET /admin/orders HTTP/1.1" 200 -
+[2026-11-18 12:26:22,700] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:22] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-18 12:26:31,227] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:31] "GET /admin/orders/15 HTTP/1.1" 200 -
+[2026-11-18 12:26:31,237] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:31] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-18 12:26:45,663] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:45] "GET /admin/orders/16 HTTP/1.1" 200 -
+[2026-11-18 12:26:45,676] - INFO: 127.0.0.1 - - [18/Nov/2026 12:26:45] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-18 12:27:05,985] - INFO: 127.0.0.1 - - [18/Nov/2026 12:27:05] "GET / HTTP/1.1" 200 -
+[2026-11-18 12:27:05,997] - INFO: 127.0.0.1 - - [18/Nov/2026 12:27:05] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:27:08,230] - INFO: 127.0.0.1 - - [18/Nov/2026 12:27:08] "GET /logout HTTP/1.1" 302 -
+[2026-11-18 12:27:09,232] - INFO: 127.0.0.1 - - [18/Nov/2026 12:27:09] "GET / HTTP/1.1" 200 -
+[2026-11-18 12:27:09,250] - INFO: 127.0.0.1 - - [18/Nov/2026 12:27:09] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:27:10,664] - INFO: User in register page
+[2026-11-18 12:27:10,687] - INFO: 127.0.0.1 - - [18/Nov/2026 12:27:10] "GET /register HTTP/1.1" 200 -
+[2026-11-18 12:27:10,696] - INFO: 127.0.0.1 - - [18/Nov/2026 12:27:10] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:28:00,894] - INFO: Account created
+[2026-11-18 12:28:00,896] - INFO: 127.0.0.1 - - [18/Nov/2026 12:28:00] "POST /register HTTP/1.1" 302 -
+[2026-11-18 12:28:00,901] - INFO: User in login page
+[2026-11-18 12:28:00,903] - INFO: 127.0.0.1 - - [18/Nov/2026 12:28:00] "GET /login HTTP/1.1" 200 -
+[2026-11-18 12:28:00,917] - INFO: 127.0.0.1 - - [18/Nov/2026 12:28:00] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:28:15,278] - WARNING: Password incorrect
+[2026-11-18 12:28:15,279] - INFO: 127.0.0.1 - - [18/Nov/2026 12:28:15] "POST /login HTTP/1.1" 302 -
+[2026-11-18 12:28:15,285] - INFO: User in login page
+[2026-11-18 12:28:15,286] - INFO: 127.0.0.1 - - [18/Nov/2026 12:28:15] "GET /login HTTP/1.1" 200 -
+[2026-11-18 12:28:15,297] - INFO: 127.0.0.1 - - [18/Nov/2026 12:28:15] "GET /static/css/style.css HTTP/1.1" 304 -
+[2026-11-18 12:28:36,673] - INFO: Moulya Meruva entering admin dashboard
+[2026-11-18 12:28:36,674] - INFO: 127.0.0.1 - - [18/Nov/2026 12:28:36] "POST /login HTTP/1.1" 302 -
+[2026-11-18 12:28:39,649] - INFO: 127.0.0.1 - - [18/Nov/2026 12:28:39] "GET /admin/dashboard HTTP/1.1" 200 -
+[2026-11-18 12:28:39,666] - INFO: 127.0.0.1 - - [18/Nov/2026 12:28:39] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-18 12:28:45,573] - INFO: 127.0.0.1 - - [18/Nov/2026 12:28:45] "GET /admin/orders HTTP/1.1" 200 -
+[2026-11-18 12:28:45,582] - INFO: 127.0.0.1 - - [18/Nov/2026 12:28:45] "GET /static/css/admin.css HTTP/1.1" 304 -
+[2026-11-18 12:30:51,310] - INFO:  * Detected change in 'C:\\Users\\moulya_meruva\\OneDrive\\Desktop\\Ecommerce-website\\app.py', reloading
+[2026-11-18 12:30:51,393] - INFO:  * Restarting with stat
