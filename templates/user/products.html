@@ -1,5 +1,4 @@
 
-
 {% extends "base.html" %}
 
 {% block title %}Products | ShopZone{% endblock %}
@@ -8,12 +7,11 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/user.css') }}">
 {% endblock %}
 
-
-
 {% block content %}
 
 <div class="container">
 
+    <!-- PAGE HEADER -->
     <div class="page-header">
         <div>
             <h1>Products</h1>
@@ -21,6 +19,7 @@
         </div>
     </div>
 
+    <!-- SEARCH AND FILTER -->
     <div class="product-tools">
 
         <form method="GET" action="{{ url_for('products') }}">
@@ -40,6 +39,7 @@
 
                 <option
                     value="{{ category }}"
+                    {% if request.args.get('category') == category %}selected{% endif %}
                 >
                     {{ category }}
                 </option>
@@ -56,41 +56,61 @@
 
     </div>
 
-
+    <!-- PRODUCT GRID -->
     <div class="product-grid">
 
         {% for product in products %}
-        
 
         <div class="product-card">
-            
-            
 
+            <!-- PRODUCT IMAGE -->
             <div class="product-image">
 
-                {% if product.storedpath %}
-                
+                {% if product.storedpath and product.storedpath.startswith('http') %}
+
+                    <!-- SUPABASE STORAGE IMAGE -->
                     <img
-                        src="{{ url_for('static', 
-                        filename=product.storedpath.replace('\\', '/').replace('static/', '')) }}"
+                        src="{{ product.storedpath }}"
                         alt="{{ product.productname }}"
                         class="product-image"
-                        >
+                    >
+
+                {% elif product.storedpath %}
+
+                    <!-- LOCAL STATIC IMAGE -->
+                    {% set image_path = product.storedpath.replace('\\', '/').replace('static/', '', 1) %}
+
+                    <img
+                        src="{{ url_for('static', filename=image_path) }}"
+                        alt="{{ product.productname }}"
+                        class="product-image"
+                    >
+
+                {% elif product.imgname %}
+
+                    <!-- OLD LOCAL IMAGE -->
+                    <img
+                        src="{{ url_for('static', filename='images/products/' + product.imgname) }}"
+                        alt="{{ product.productname }}"
+                        class="product-image"
+                    >
 
                 {% else %}
+
                     <div class="no-image">
-                                No Image
-                            </div>
+                        No Image
+                    </div>
 
                 {% endif %}
-                
 
             </div>
 
-
+            <!-- PRODUCT INFORMATION -->
             <div class="product-info">
 
-                <h3>{{ product.productname }}</h3>
+                <h3>
+                    {{ product.productname }}
+                </h3>
 
                 <p class="product-category">
                     {{ product.category }}
@@ -99,39 +119,42 @@
                 <p class="product-price">
                     ₹{{ product.saleprice }}
                 </p>
-                
-               
+
+                <!-- STOCK STATUS -->
                 {% if product.quantity > 0 %}
 
-                <span class="stock available">
-                    In Stock
-                </span>
+                    <span class="stock available">
+                        In Stock
+                    </span>
 
-                <a
-                    href="{{ url_for('product_details', product_id=product.productid) }}"
-                    class="btn btn-primary"
-                >
-                    View Product
-                </a>
+                    <a
+                        href="{{ url_for('product_details', product_id=product.productid) }}"
+                        class="btn btn-primary"
+                    >
+                        View Product
+                    </a>
 
                 {% else %}
 
-                <span class="stock unavailable">
-                    Out of Stock
-                </span>
+                    <span class="stock unavailable">
+                        Out of Stock
+                    </span>
 
                 {% endif %}
 
             </div>
-            
 
         </div>
 
         {% else %}
 
+        <!-- NO PRODUCTS -->
         <div class="empty-products">
+
             <h3>No Products Found</h3>
+
             <p>Try another search or category.</p>
+
         </div>
 
         {% endfor %}
@@ -141,4 +164,3 @@
 </div>
 
 {% endblock %}
-
