@@ -27,7 +27,7 @@ from werkzeug.security import check_password_hash
 from database.utilsDB import AuthQueries
 from database.adminDB import AdminQueries
 from database.userDB import UserQueries
-
+from database.storage import upload_product_image
 
 # ======================================================
 # CONFIGURATION
@@ -82,37 +82,6 @@ def allowed_file(filename):
         "." in filename
         and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
     )
-
-
-def save_product_image(file):
-
-    if not file or not file.filename:
-        return None, None
-
-    if not allowed_file(file.filename):
-        return None, None
-
-    original_name = secure_filename(file.filename)
-
-    extension = original_name.rsplit(".", 1)[1].lower()
-
-    new_filename = f"{uuid.uuid4().hex}.{extension}"
-
-    file_path = os.path.join(
-        app.config["UPLOAD_FOLDER"],
-        new_filename
-    )
-
-    file.save(file_path)
-
-    stored_path = os.path.join(
-        "images",
-        "products",
-        new_filename
-    ).replace("\\", "/")
-
-    return new_filename, stored_path
-
 
 def razorpay_client():
 
@@ -532,7 +501,6 @@ def remove_cart(cartid):
 
     return redirect(url_for("cart"))
 
-
 # ======================================================
 # CHECKOUT
 # ======================================================
@@ -562,6 +530,7 @@ def checkout():
             flash("Please enter delivery address", "danger")
             return redirect(url_for("checkout"))
 
+        # CASH ON DELIVERY
         if payment_method == "cash":
 
             status, result = UserQueries.createOrder(
@@ -571,16 +540,13 @@ def checkout():
             )
 
             if status:
-                return redirect(
-                    url_for(
-                        "order_success",
-                        order_id=result["order_id"]
-                    )
-                )
+                flash("Order placed successfully!", "success")
+                return redirect(url_for("orders"))
 
             flash(str(result), "danger")
             return redirect(url_for("checkout"))
 
+        # RAZORPAY
         elif payment_method == "razorpay":
 
             try:
@@ -642,6 +608,7 @@ def checkout():
         total=total,
         razorpay_key_id=RAZORPAY_KEY_ID
     )
+
 
 # ======================================================
 # RAZORPAY PAYMENT VERIFY
@@ -1040,6 +1007,7 @@ def admin_update_user_status(userid):
     return redirect(url_for("admin_users"))
 
 
+
 # ======================================================
 # ADMIN PRODUCTS
 # ======================================================
@@ -1065,17 +1033,26 @@ def admin_products():
     total = result["total"]
     categories = result["categories"]
 
-    total_pages = max(1, (total + 6) // 7)
+    per_page = 7
+    total_pages = max(1, (total + per_page - 1) // per_page)
 
     return render_template(
         "admin/products.html",
         products=products_list,
         categories=categories,
         search=search,
-        selected_category=category,
+        category=category,
         page=page,
-        total_pages=total_pages
+        per_page=per_page,
+        total=total,
+        total_pages=total_pages,
+        status="",
+        stock="",
+        min_price=None,
+        max_price=None
     )
+
+
 
 
 # ======================================================
@@ -1102,12 +1079,13 @@ def admin_add_products():
 
         image_file = request.files.get("image")
 
+        # Validate product details
         if not product_name or not category:
             flash("Product name and category are required", "danger")
             return redirect(url_for("admin_add_products"))
 
+        # Validate price and stock
         try:
-
             saleprice = Decimal(saleprice)
             quantity = int(quantity)
 
@@ -1115,21 +1093,26 @@ def admin_add_products():
                 raise ValueError("Invalid price or stock")
 
         except Exception:
-
             flash("Enter valid price and stock", "danger")
             return redirect(url_for("admin_add_products"))
 
+        # Upload image to Supabase Storage
         imgname = None
         storedpath = None
 
         if image_file and image_file.filename:
 
-            imgname, storedpath = save_product_image(image_file)
-
-            if not imgname:
+            if not allowed_file(image_file.filename):
                 flash("Invalid image file", "danger")
                 return redirect(url_for("admin_add_products"))
 
+            imgname, storedpath = upload_product_image(image_file)
+
+            if not imgname or not storedpath:
+                flash("Image upload failed. Please try again.", "danger")
+                return redirect(url_for("admin_add_products"))
+
+        # Prepare product data
         product_data = (
             product_name,
             description,
@@ -1140,9 +1123,8 @@ def admin_add_products():
             storedpath
         )
 
-        status, message = AdminQueries.insertProductRecord(
-            product_data
-        )
+        # Insert product into database
+        status, message = AdminQueries.insertProductRecord(product_data)
 
         if status:
             flash(message, "success")
@@ -1150,6 +1132,7 @@ def admin_add_products():
 
         flash(message, "danger")
 
+    # Load categories
     category_status, categories = AdminQueries.getAllCategories()
 
     if not category_status:
@@ -1159,7 +1142,6 @@ def admin_add_products():
         "admin/add_product.html",
         categories=categories
     )
-
 
 # ======================================================
 # ADMIN EDIT PRODUCT
