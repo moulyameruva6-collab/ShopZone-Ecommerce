@@ -1011,29 +1011,48 @@ def admin_update_user_status(userid):
 # ======================================================
 # ADMIN PRODUCTS
 # ======================================================
-
 @app.route("/admin/products")
 @admin_required
 def admin_products():
 
     search = request.args.get("search", "").strip()
     category = request.args.get("category", "").strip()
+    status_filter = request.args.get("status", "").strip()
+    stock = request.args.get("stock", "").strip()
+
+    min_price = request.args.get("min_price", "").strip()
+    max_price = request.args.get("max_price", "").strip()
+
+    try:
+        min_price = Decimal(min_price) if min_price else None
+        max_price = Decimal(max_price) if max_price else None
+    except Exception:
+        min_price = None
+        max_price = None
 
     page = request.args.get("page", 1, type=int)
     page = max(page, 1)
 
+    per_page = 7
+
     result = AdminQueries.getProducts(
         search=search,
         category=category,
+        status=status_filter,
+        stock=stock,
+        min_price=min_price,
+        max_price=max_price,
         page=page,
-        per_page=7
+        per_page=per_page
     )
 
     products_list = result["products"]
     total = result["total"]
     categories = result["categories"]
 
-    per_page = 7
+    print("ADMIN PRODUCTS COUNT:", total)
+    print("ADMIN PRODUCTS DISPLAYED:", len(products_list))
+
     total_pages = max(1, (total + per_page - 1) // per_page)
 
     return render_template(
@@ -1042,18 +1061,15 @@ def admin_products():
         categories=categories,
         search=search,
         category=category,
+        status=status_filter,
+        stock=stock,
+        min_price=min_price,
+        max_price=max_price,
         page=page,
         per_page=per_page,
         total=total,
-        total_pages=total_pages,
-        status="",
-        stock="",
-        min_price=None,
-        max_price=None
+        total_pages=total_pages
     )
-
-
-
 
 # ======================================================
 # ADMIN ADD PRODUCT
